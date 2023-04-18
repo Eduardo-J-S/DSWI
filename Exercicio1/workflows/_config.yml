@@ -5,6 +5,9 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+    domain: DSWI       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+    url: https://github.com/Eduardo-J-S/  # the base hostname and protocol for your site, e.g. http://example.com
+    baseurl: /DSWI/    
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
