@@ -7,137 +7,137 @@
     <title>Conta</title>
 </head>
 <body>
-    <header>
+    <main>
         <h1>Crie uma Nova Conta</h1>
-    </header>
-    <form action="" method="post">
-        <fieldset>
-            <h2>Conta</h2>
-            <ul>
-                <li>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome">
-                </li>
-                <li>
-                    <label for="sobrenome">Sobrenome:</label>
-                    <input type="text" id="sobrenome" name="sobrenome">
-                </li>
-                <li>
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email">
-                </li>
-                <li>
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha">
-                </li>
-                <li>
-                    <label for="confirmar_senha">Repita a senha:</label>
-                    <input type="password" id="confirmar_senha" name="confirmar_senha">
-                </li>
-            </ul>
-        </fieldset>
-        <fieldset>
-            <h2>Endereço</h2>
-            <ul>
-                <li>
-                    <label for="logradouro">Logradouro:</label>
-                    <input type="text" id="logradouro" name="logradouro">
-                </li>
-                <li>
-                    <label for="complemento">Complemento:</label>
-                    <input type="text" id="complemento" name="complemento">
-                </li>
-                <li>
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade">
-                </li>
-                <li>
-                    <label for="estado">Estado:</label>
-                    <select id="estado" name="estado">
-                        <option value="" disabled selected>Selecione um estado</option>
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espírito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
-                    </select>
-                </li>
-                <li>
-                    <label for="cep">CEP:</label>
-                    <input type="text" id="cep" name="cep" maxlength="8">
-                </li>
-            </ul>
-        </fieldset>
-        <fieldset>
-            <h2>Perfil</h2>
-            <ul>
-                <li>
-                    <label for="foto">Foto:</label>
-                    <input type="file" id="foto" name="foto" accept=".JPG,.GIF,.PNG" maxlength="716800">
-                    <p>Tamanho máximo de 700KB, JPG, GIF PNG.</p>
-                </li>
-                <li>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome">
-                </li>
-                <li>
-                    <label for="site">Site:</label>
-                    <input type="url" id="site" name="site">
-                    <p>Tem um site ou um blog? Coloque o endereço aqui.</p>
-                </li>
-                <li>
-                    <label for="biografia">Biografia::</label>
-                    <textarea id="biografia" name="biografia" rows="5" cols="40" maxlength="1000"></textarea>
-                </li>
-                <li>
-                    <label for="genero">Gênero:</label>
-                    <input type="radio" id="masculino" name="sexo" value="Masculino">
-                    <label for="masculino">Masculino</label>
-                    <input type="radio" id="feminino" name="sexo" value="Feminino">
-                    <label for="feminino">Feminino</label>
-                    <input type="radio" id="outro" name="sexo" value="Outro">
-                    <label for="outro">Outro</label>
-                </li>
-            </ul>
-        </fieldset>
-        <fieldset>
-            <h2>E-mails</h2>
-            <ul>
-                <li>
-                    <input type="checkbox" id="confirmacao1" name="confirmacao1" value="Confirmacao1">
-                    <label for="confirmacao1">Tudo bem em enviar e-mails com mensagens de outros usuários.</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="confirmacao2" name="confirmacao2" value="Confirmacao2">
-                    <label for="confirmacao2">Tudo bem em enviar e-mails ocasionais com promoções sobre outros produtos.</label>
-                </li>
-            </ul>
-        </fieldset>
-        <fieldset>
-            <button type="submit">Criar conta</button>
-        </fieldset>
-    </form>
+        <form action="" method="post">
+            <fieldset>
+                <h2>Conta</h2>
+                <ul>
+                    <li>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome">
+                    </li>
+                    <li>
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome">
+                    </li>
+                    <li>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email">
+                    </li>
+                    <li>
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha">
+                    </li>
+                    <li>
+                        <label for="confirmar_senha">Repita a senha:</label>
+                        <input type="password" id="confirmar_senha" name="confirmar_senha">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <h2>Endereço</h2>
+                <ul>
+                    <li>
+                        <label for="logradouro">Logradouro:</label>
+                        <input type="text" id="logradouro" name="logradouro">
+                    </li>
+                    <li>
+                        <label for="complemento">Complemento:</label>
+                        <input type="text" id="complemento" name="complemento">
+                    </li>
+                    <li>
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade">
+                    </li>
+                    <li>
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado">
+                            <option value="" disabled selected>Selecione um estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" maxlength="8">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <h2>Perfil</h2>
+                <ul>
+                    <li>
+                        <label for="foto">Foto:</label>
+                        <input type="file" id="foto" name="foto" accept=".JPG,.GIF,.PNG" maxlength="716800">
+                        <p>Tamanho máximo de 700KB, JPG, GIF PNG.</p>
+                    </li>
+                    <li>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome">
+                    </li>
+                    <li>
+                        <label for="site">Site:</label>
+                        <input type="url" id="site" name="site">
+                        <p>Tem um site ou um blog? Coloque o endereço aqui.</p>
+                    </li>
+                    <li>
+                        <label for="biografia">Biografia::</label>
+                        <textarea id="biografia" name="biografia" rows="5" cols="40" maxlength="1000"></textarea>
+                    </li>
+                    <li>
+                        <label for="genero">Gênero:</label>
+                        <input type="radio" id="masculino" name="sexo" value="Masculino">
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" id="feminino" name="sexo" value="Feminino">
+                        <label for="feminino">Feminino</label>
+                        <input type="radio" id="outro" name="sexo" value="Outro">
+                        <label for="outro">Outro</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <h2>E-mails</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="confirmacao1" name="confirmacao1" value="Confirmacao1">
+                        <label for="confirmacao1">Tudo bem em enviar e-mails com mensagens de outros usuários.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="confirmacao2" name="confirmacao2" value="Confirmacao2">
+                        <label for="confirmacao2">Tudo bem em enviar e-mails ocasionais com promoções sobre outros produtos.</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <button type="submit">Criar conta</button>
+            </fieldset>
+        </form>
+    </main>
 </body>
 </html>
