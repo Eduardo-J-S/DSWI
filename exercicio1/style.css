@@ -27,15 +27,27 @@ footer {
     padding: 1.25rem;
 }
 
+header nav {
+    display: block;
+    text-align: center;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30rem;
+}
+
 header img {
     display: block;
     margin: 1rem auto;
     height: 40px;
 }
 
+header img,
 header nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin: 0;
 }
 
 nav a { 
@@ -92,24 +104,3 @@ img {
     margin-left: .6rem;
 }
 
-@media screen and (min-width: 40rem) {
-    header nav {
-        display: block;
-        text-align: center;
-    }
-
-}
-
-@media screen and (min-width: 48rem) {
-    header div {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-right: 30rem;
-    }
-
-    header img,
-    header nav {
-        margin: 0;
-    }
-}
