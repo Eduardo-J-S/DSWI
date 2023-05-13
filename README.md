@@ -11,4 +11,7 @@ Ecercícios:
       <li>
         <a href="https://eduardo-j-s.github.io/DSWI/exercicio2/conta.html">Exercício 2</a>
       </li>
+      <li>
+        <a href="https://eduardo-j-s.github.io/DSWI/exercicio3/home.html">Exercício 2</a>
+      </li>
   </ol>
