@@ -15,6 +15,6 @@ Ecercícios:
         <a href="https://eduardo-j-s.github.io/DSWI/exercicio3/pages/home.html">Exercício 3</a>
       </li>
       <li>
-        <a href="https://eduardo-j-s.github.io/DSWI/projeto/pages/home.html">Exercício 3</a>
+        <a href="https://eduardo-j-s.github.io/DSWI/projeto/pages/home.html">Projeto</a>
       </li>
   </ol>
