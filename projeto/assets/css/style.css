@@ -5,6 +5,7 @@
     --color-dark3: #414141;
     --color-dark4: #1c1c1c;
     --color-dark5: #343434;
+    --color-black: #000000;
     --color-purple: #b040ff;
 }
 *{
@@ -12,12 +13,12 @@
     padding: 0;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: var(--color-dark1);
     color: var(--color-white);
 }
 .img_logo_header{
-    width: 45px;
+    width: 35px;
 }
 .header,
 .navigation_header{
@@ -26,35 +27,29 @@ body{
     align-items: center;
 }
 .header{
-    background-color: var(--color-dark2);
+    background-color: var(--color-dark5);
     justify-content: space-between;
     padding: 0 10%;
     height: 3.5em;
     box-shadow: 1px 1px 4px var(--color-dark4);
 }
 .navigation_header{
-    gap: 3em;
+    gap: 50px;
     z-index: 2;
 }
 .content{
-    padding-top: 5em;
     text-align: center;
     height: 100vh;
-    transition: 1s;
+    transition: 0.3s;
 }
 .navigation_header a{
     text-decoration: none;
-    color: var(--color-purple);
+    color: var(--color-white);
     transition: 1s;
-    font-weight: bold;
+    font-weight: 500;
 }
 .navigation_header a:hover{
-    color: var(--color-white);
-}
-.active{
-    background: var(--color-dark3);
-    padding: 10px;
-    border-radius: 10px;
+    color: var(--color-purple);
 }
 .btn_icon_header{
     background: transparent;
@@ -63,23 +58,49 @@ body{
     cursor: pointer;
     display: none;
 }
+.button{
+    background-color: var(--color-dark3);
+    border: var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-dark4);
+    color: var(--color-dark4);
+    font-size: 20px;
+    padding: 4px 8px;
+    max-width: 224px;
+    text-transform: capitalize;
+}
+.menu_cadastro{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 @media screen and (max-width: 768px) {
     .navigation_header{
         position: absolute;
-        flex-direction: column !important;
+        flex-direction: column;
         top: 0;
         background: var(--color-dark5);
         height: 100%;
         width: 35vw;
-        padding: 1em;
+        padding: 16px;
         animation-duration: 1s;
         margin-left: -100vw;
     }
     .btn_icon_header{
         display: block;
     }
+    .menu_cadastro{
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 @keyframes showSidebar {
     from {margin-left: -100vw;}
     to {margin-left: -10vw;}
+}
+
+.image_top{
+    background: url('../img/pexels.jpg') no-repeat center center;
+    background-size: cover;
+    height: 70vh;
 }
