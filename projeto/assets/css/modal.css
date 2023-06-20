@@ -16,8 +16,8 @@
     margin: 20px auto;
     padding: 20px;
     border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);}
-  
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
 .modal-header {
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@
     margin: 0;
     color: #000000;
     margin-left: 150px;
-    margin: 20px auto;;
+    margin: 20px auto;
 }
   
 .close {

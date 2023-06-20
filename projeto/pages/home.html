@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <script src="../js/script.js" defer></script>
+    <script src="../js/sidebar.js" defer></script>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/cards.css">
     <link rel="stylesheet" href="../assets/css/modal.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body id="body">
     <header class="header" id="header">
@@ -41,25 +44,34 @@
     </header>
     <main tabindex="0" class="content" onfocus="closeSidebar()" id="content">
         <div class="image_top"></div>
-            <div id="cards" class="cards" data-bs-theme="dark">
-                <!-- <section class="card">
-                    <div class="card-image">
-                        <img src="${img}"/>
-                    </div>
-                    <div class="card-body">
-                    <h4>${title}</h4>
-                        <div class="card-status">
-                        <p class="badge">${release_date}</p>
-                            <p class="badge"><img width="10" src="./icons/star.svg"> ${vote_average}</p>
-                        </div>
-                    </div>
-                </section> -->
-            </div>
-
-
+        <div id="cards" class="cards" data-bs-theme="dark"></div>
         <div id="modal"></div>
-
     </main>
-    
+    <footer>
+        <div class="midias_sociais">
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <ul class="links">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Sobre</a>
+            </li>
+            <li>
+                <a href="#">Serviços</a>
+            </li>
+            <li>
+                <a href="#">Contato</a>
+            </li>
+        </ul>
+        <div class="line"></div>
+        <p class="copyright">
+            Eduardo-J-S @ 2023
+        </p>
+    </footer>
 </body>
 </html>

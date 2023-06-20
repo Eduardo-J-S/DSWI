@@ -10,8 +10,6 @@
     margin: 0 auto;
     padding: 4em;
 }
-
-
 .card{
     position: relative;
     overflow: hidden;
@@ -46,4 +44,20 @@
 .card:hover .card-body{
     opacity: 1;
     transform: translateY(0px);
+}
+@media screen and (max-width: 768px) {
+    .cards{
+        position: absolute;
+        flex-direction: column;
+        padding-top: 4em;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        gap: 100px;
+        position: relative;
+        height: min-content;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 4em;
+    }
 }
