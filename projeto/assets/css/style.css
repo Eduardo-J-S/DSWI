@@ -97,6 +97,9 @@ body{
     .image_top{
         width: 100%;
     }
+    .content{
+        margin-left: -2.5em;
+    }
 }
 @keyframes showSidebar {
     from {margin-left: -100vw;}

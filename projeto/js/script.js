@@ -49,10 +49,10 @@ fetch('livros.json')
         let estoq = obj.estoque
 
         let estrutura = `<section class="card">
-            <div class="card_image">
+            <div class="card_image" id="card-image">
                 <img src="${img}" alt="">
             </div>
-            <div>
+            <div class="card-body">
                 <h4>${title}</h4>
                 <div class="card_status">
                     <p>${estoq}</p>

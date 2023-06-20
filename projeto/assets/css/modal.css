@@ -48,3 +48,9 @@
     margin-bottom: 10px;
     color: #000000;
 }
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 85%;
+    }
+}

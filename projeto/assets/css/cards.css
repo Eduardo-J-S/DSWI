@@ -24,7 +24,8 @@
     width: 100%;
 }
 .card h4{
-    font-size: 75%;
+    font-size: 85%;
+    padding: .5em;
 }
 
 .card * {
@@ -46,18 +47,18 @@
     transform: translateY(0px);
 }
 @media screen and (max-width: 768px) {
-    .cards{
-        position: absolute;
-        flex-direction: column;
-        padding-top: 4em;
+    #cards{
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        justify-content: center;
-        gap: 100px;
+        grid-template-columns: repeat(2, 1fr);
         position: relative;
-        height: min-content;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 4em;
+        gap: 85px;
+    }
+    #card-image img{
+        width: 7rem;
+        height: 11rem;
+    }
+    .card h4{
+        font-size: 15px;
+        padding: .5em;
     }
 }
