@@ -100,6 +100,18 @@ body{
     .content{
         margin-left: -2.5em;
     }
+
+    .image_top h3{
+        text-align: left;
+        padding-left: 35px;
+ 
+    }
+    
+    .image_top p{
+        text-align: left;
+        padding-left: 35px;
+    }
+ 
 }
 @keyframes showSidebar {
     from {margin-left: -100vw;}
@@ -110,4 +122,20 @@ body{
     background: url('../img/pexels.jpg') no-repeat center center;
     background-size: cover;
     height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_top h3{
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    color: var(--color-black);
+}
+
+.image_top p{
+    text-align: center;
+    flex-wrap: wrap;
 }

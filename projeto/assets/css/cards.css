@@ -51,7 +51,8 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         position: relative;
-        gap: 85px;
+        gap: 150px 90px; 
+        left: 25px;
     }
     #card-image img{
         width: 7rem;
