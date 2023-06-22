@@ -101,6 +101,11 @@ body{
         margin-left: -2.5em;
     }
 
+    .image_top {
+        flex-direction: row;
+        text-align: left;
+      }
+
     .image_top h3{
         text-align: left;
         padding-left: 35px;
@@ -120,22 +125,77 @@ body{
 
 .image_top{
     background: url('../img/pexels.jpg') no-repeat center center;
-    background-size: cover;
+    /*background-size: cover; */
     height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    text-align: center;
+    background-size: 200% 200%;
+    animation: gradientAnimation 80s ease infinite;
 }
 
 .image_top h3{
     text-align: center;
     flex-wrap: wrap;
-    margin-bottom: 50px;
-    color: var(--color-black);
+    margin-bottom: 10px;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    animation: glitch 3s infinite;
+    background: linear-gradient(135deg, #00ffea, #0081ff);
 }
 
 .image_top p{
+    line-height: 1.5;
     text-align: center;
     flex-wrap: wrap;
+    color: #fff;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
+@keyframes glitch {
+    0% {
+      transform: translate(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translate(-2px, 2px);
+      opacity: 0.8;
+    }
+    40% {
+      transform: translate(-2px, -2px);
+      opacity: 0.8;
+    }
+    60% {
+      transform: translate(2px, 2px);
+      opacity: 0.8;
+    }
+    80% {
+      transform: translate(2px, -2px);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(0);
+      opacity: 1;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 30%;
+    }
+    50% {
+      background-position: 70% 30%;
+    }
+    100% {
+      background-position: 0% 30%;
+    }
+  }
