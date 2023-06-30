@@ -1,0 +1,11 @@
+{
+    "filmes":[
+        {
+            "id": 1,
+            "titulo": "Animais fantasticos",
+            "ano": 2022,
+            "roteiro": "J.K Rowling",
+            "imagem": "foto.jpg"
+        }
+    ]
+}
