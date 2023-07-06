@@ -16,6 +16,8 @@
     --color-mustardYellow: #FFC857;
     --color-burntOrange: #FF6B35;
     --color-blue: #007bff;
+
+    --color-error: #ff0000;
 }
 *{
     margin: 0;
@@ -393,102 +395,82 @@ fieldset {
     margin-top: 0; 
   }
 
+.erroSenha{
+    color: var(--color-error);
+    margin-bottom: 8px;
+}
+
 @media screen and (max-width: 768px) {
     .container-cadastro{
         display: block; 
     }
-    .navegar-home {
-        margin-top: -250px;
-      }
+    .form-cadastro {
+        height: 110vh;
+    }
+   
 }
 
-@media screen and (max-width: 375px) {
-    .container-cadastro{
-        display: block; 
-    }
-    .navegar-home {
-        margin-top: -35px;
-      }
-      .form-cadastro {
-        height: 110vh;
+@media screen and (width: 414px) and (height: 896px) {
+    .form-cadastro {
+        height: 80vh;
     }
 }
 
 @media screen and (width: 390px) and (height: 844px) {
-    .navegar-home {
-      margin-top: -150px;
+    .form-cadastro {
+        height: 90vh;
     }
 }
 
 @media screen and (width: 393px) and (height: 851px) {
-    .navegar-home {
-      margin-top: -160px;
+    .form-cadastro {
+        height: 90vh;
     }
 }
 
-@media screen and (width: 360px) and (height: 740px) {
-    .navegar-home {
-      margin-top: -120px;
-    }
-}
-
-@media screen and (width: 412px) and (height: 914px) {
-    .navegar-home {
-      margin-top: -200px;
-    }
-}
-
-@media screen and (width: 414px) and (height: 896px) {
-    .navegar-home {
-      margin-top: -200px;
-    }
-}
-
-@media screen and (width: 768px) and (height: 1024px) {
-    .navegar-home {
-      margin-top: -50px;
+@media screen and (width: 412px) and (height: 915px) {
+    .form-cadastro {
+        height: 90vh;
     }
 }
 
 @media screen and (width: 820px) and (height: 1180px) {
-    .navegar-home {
-      margin-top: -50px;
-    }
     .form-cadastro {
-        height: 83vh;
+        height: 80vh;
+    }
+}
+
+@media screen and (width: 768px) and (height: 1024px) {
+    .form-cadastro {
+        height: 80vh;
     }
 }
 
 @media screen and (width: 912px) and (height: 1368px) {
-    .navegar-home {
-      margin-top: -100px;
-    }
     .form-cadastro {
-        height: 83vh;
-        overflow: scroll;
-    }
-}
-
-@media screen and (width: 540px) and (height: 720px) {
-    .navegar-home {
-      margin-top: -50px;
+        height: 80vh;
     }
 }
 
 @media screen and (width: 280px) and (height: 653px) {
-    .navegar-home {
-      margin-top: 0;
-    }
     .form-cadastro {
-        height: 110vh;
+        height: 130vh;
+    }
+    .erroSenha{
+       font-size: 13px;
+       justify-content: center;
+       align-items: center;
+    }
+}
+
+@media screen and (width: 412px) and (height: 914px) {
+    .form-cadastro {
+        height: 80vh;
     }
 }
 
 @media screen and (width: 1024px) and (height: 600px) {
-    .navegar-home {
-      margin-top: 10px;
-    }
     .form-cadastro {
-        height: 120vh;
+        height: 130vh;
     }
 }
