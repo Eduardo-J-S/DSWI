@@ -15,6 +15,7 @@
     --color-mossGreen: #607D5B;
     --color-mustardYellow: #FFC857;
     --color-burntOrange: #FF6B35;
+    --color-blue: #007bff;
 }
 *{
     margin: 0;
@@ -214,4 +215,177 @@ body{
     100% {
       background-position: 0% 30%;
     }
+}
+
+
+
+/* css cadastro */
+
+#container-body-cadastro{
+    height: 100vh;
+    width: 100%;
+}
+
+.img-cadastro{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.img-cadastro img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
   }
+
+.img-cadastro img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+.form-cadastro {
+    flex: 1.2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: var(--color-white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title{
+    text-align: center;
+    margin-top: 10px;
+    color: var(--color-deepNavyBlue);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container-cadastro{
+    display: flex;
+}
+
+.list-social-media{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.list-social-media li {
+    margin-right: 10px;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.item-social-media a{
+    color: var(--color-darkGrey);
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.item-social-media a:hover {
+    background-color: var(--color-mossGreen);
+  }
+
+.input-caixa{
+    list-style-type: none;
+    justify-content: center;
+}
+
+.inputs{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-caixa {
+    margin-bottom: 20px;
+}
+  
+.input-caixa label {
+    display: block;
+    font-size: 14px;
+    color: var(--color-dark2);
+
+}
+
+.input-caixa input[type="text"],
+.input-caixa input[type="email"],
+.input-caixa input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: var(--color-dark3);
+}
+  
+.input-caixa input[type="text"]:focus,
+.input-caixa input[type="email"]:focus,
+.input-caixa input[type="password"]:focus{
+    outline: none;
+    border-color: var(--color-dark2);
+}
+
+.registrar {
+    text-align: center; 
+}
+  
+.registrar button {
+    background-color: var(--color-blue); 
+    color: var(--color-white); 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+  
+.registrar button:hover {
+    background-color: var(--color-deepNavyBlue); 
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.login-button p {
+    margin-right: 10px;
+    color: var(--color-deepNavyBlue);
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-blue);
+}
+.login-button button {
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .container-cadastro{
+        display: block; 
+    }
+}
