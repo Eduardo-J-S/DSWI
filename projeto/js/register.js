@@ -7,7 +7,7 @@ const form = document.getElementById('cadastro-form');
 form.addEventListener('submit', (event) => {
     event.preventDefault(); // Impede o envio padrão do formulário
 
-    //url da requisição 
+    //url da requisição
     const url = 'http://localhost:3000/cadastro/';
 
     // Pega os valores dos inputs
@@ -25,7 +25,7 @@ form.addEventListener('submit', (event) => {
 
     let erroContent = document.createElement("div");
 
-    estrutura = `<p class="erroSenha">Erro: As senhas não correspondem.</p>` 
+    estrutura = `<p class="erroSenha">Erro: As senhas não correspondem.</p>`
 
     if (senha !== confirmarSenha) {
         erroContent.innerHTML = estrutura
@@ -53,14 +53,20 @@ form.addEventListener('submit', (event) => {
     })
         .then(response => response.json())
         .then(data => {
-        console.log('Usuário cadastrado com sucesso!', data);
-            if (document.referrer !== '') {
-                window.history.back(); // Redireciona para a página anterior
-            } else {
-                window.location.href = 'home.html'; // Redireciona para a página inicial
-            }
+            console.log('Usuário cadastrado com sucesso!', data);
+
+            window.location.href = 'login.html';
+
         })
         .catch(error => {
-        console.error('Erro ao cadastrar usuário:', error);
+            console.error('Erro ao cadastrar usuário:', error);
         });
 });
+
+
+function beforeLogin(){
+    // Exibe o ícone da conta do usuário
+    document.getElementById('userIcon').style.display = 'block';
+    // Oculta os botões "Login" e "Cadastro"
+    document.getElementById('menu_cadastro').style.display = 'none';
+}

@@ -8,6 +8,7 @@
     <title>Livros Dev | Home</title>
     <script src="../js/script.js" defer></script>
     <script src="../js/sidebar.js" defer></script>
+    <script src="../js/userAcess.js" defer></script>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/cards.css">
     <link rel="stylesheet" href="../assets/css/modal.css">
@@ -37,15 +38,25 @@
                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                 </svg>
             </button>
-            <a href="#">Home</a>
-            <a href="#">Fórum</a>
+            <a href="home.html">Home</a>
+            <a href="forum.html">Fórum</a>
             <a href="about.html">Sobre</a>
-            <div class="menu_cadastro">
+            <a href="contact.html">Contato</a>
+            <div class="menu_cadastro" id="menu_cadastro">
                 <div>
-                    <a href="#">Login</a>
+                    <a href="login.html">Login</a>
                 </div>
                 <div class="cadastrarDivButton">
                     <a href="register.html" class="button">Cadastrar</a>
+                </div>
+            </div>
+            <div id="userIcon" class="user-icon">
+                <i class="fa-regular fa-user"></i>
+                <i class="fa-solid fa-caret-down"></i>
+                <div id="userModal" class="user-modal">
+                    <div class="modal-content">
+                        <button id="userSair">Sair</button>
+                    </div>
                 </div>
             </div>
         </nav>

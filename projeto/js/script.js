@@ -74,3 +74,8 @@ fetch('livros.json')
 
     e.map(add_card)
 })
+
+
+
+
+  

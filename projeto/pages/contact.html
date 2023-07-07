@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Sobre</title>
+    <title>Contato</title>
 </head>
-<body>
+<body id="container_contact">
     <header class="header" id="header">
         <button onclick="toggleSidebar()" class="btn_icon_header">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
@@ -54,6 +54,55 @@
             </div>
         </nav>
     </header>
-    <h1>TESTE REDIRECIONAMENTO</h1>
+    <main>
+        <div class="col-md">
+            <h1 class="text_title">Contato</h1>
+            <p class="pr_title">Utilize este formulário para entrar em contato conosco, enviando suas dúvidas, ou sugestões.</p>
+        </div>
+        <div class="contact">
+            <form action="#" method="post" class="form-contat">
+                <ul class="inputs-contact">
+                    <li class="input-caixa-contact">
+                        <label for="assunto">Assunto<span>*</span></label>
+                        <fieldset>
+                            <input type="text" id="assunto" name="assunto" required>
+                        </fieldset>
+                    </li>
+                    <li class="input-caixa-contact">
+                        <label for="nome">Seu Nome<span>*</span></label>
+                        <fieldset>
+                            <input type="text" id="nome" name="nome" required>
+                        </fieldset>
+                    </li>
+                    <li class="input-caixa-contact">
+                        <label for="email">Seu E-mail<span>*</span></label>
+                        <fieldset>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </fieldset>
+                    </li>
+                    <li class="input-caixa-contact">
+                        <label for="assunto_option">Assunto<span>*</span></label>
+                        <fieldset>
+                            <select id="assunto_option" name="assunto_option">
+                                <option value="duvida">Dúvida</option>
+                                <option value="sugestao">Sugestão</option>
+                            </select>
+                        </fieldset>
+                    </li>
+                    <li class="input-caixa-contact">
+                        <label for="menssagem">Mensagem<span>*</span></label>
+                        <p>Digite aqui, a sua mensagem</p>
+                        <fieldset>
+                            <textarea id="menssagem" name="menssagem" rows="10" cols="50" maxlength="1000"></textarea>
+                        </fieldset>
+                    </li>
+                </ul>
+                <div class="enviar_contact">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
 </body>
 </html>

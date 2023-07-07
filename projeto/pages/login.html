@@ -4,21 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Login</title>
+    <script src="../js/login.js" defer></script>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
-    <script src="../js/register.js" defer></script>
 </head>
 
 <body id="container-body-cadastro">
     <main class="container-cadastro">
         <div class="img-cadastro">
-            <img src="../assets/register.svg" alt="Imagem da tela de cadastro" title="Cadastro">
+            <img src="../assets/login.svg" alt="Imagem da tela de login" title="Login">
         </div>
         <div class="form-cadastro">
             <nav class="navegar-home">
@@ -44,22 +42,9 @@
 
                 <ul class="inputs">
                     <li class="input-caixa">
-                        <label for="nome">Nome</label>
-                        <fieldset>
-                            <input type="text" id="primeiro_nome" name="primeiro_nome" placeholder="Digite seu nome"
-                                required>
-                        </fieldset>
-                    </li>
-                    <li class="input-caixa">
                         <label for="email">E-mail</label>
                         <fieldset>
                             <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-                        </fieldset>
-                    </li>
-                    <li class="input-caixa">
-                        <label for="telefone">Telefone</label>
-                        <fieldset>
-                            <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
                         </fieldset>
                     </li>
                     <li class="input-caixa">
@@ -68,24 +53,15 @@
                             <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
                         </fieldset>
                     </li>
-                    <li class="input-caixa">
-                        <label for="confirmarSenha">Confirmar senha</label>
-                        <fieldset>
-                            <input type="password" id="confirmarSenha" name="confirmarSenha"
-                                placeholder="Confirme sua senha" required>
-                        </fieldset>
-                    </li>
                 </ul>
 
-                <div id="error" class="error"></div>
-
-                <div class="registrar">
-                    <button type="submit">Cadastrar</button>
+                <div class="registrar padding">
+                    <button type="submit">Login</button>
                 </div>
 
-                <nav class="login-button">
-                    <p>Já tem uma conta? </p>
-                    <button><a href="login.html">Entrar</a></button>
+                <nav class="login-button padding">
+                    <p>Não tem uma conta? </p>
+                    <button><a href="register.html">Assinar</a></button>
                 </nav>
             </form>
         </div>

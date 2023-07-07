@@ -1,10 +1,10 @@
 footer{
-    background: linear-gradient(to top, #2b2a31 0%, #5a5a7e 100%);
+    background: linear-gradient(to top, #001f3f 0%, #4a4a7e 100%);
     display: flex;
     align-items: center;
     flex-direction: column;
     color: white;
-    padding: 40px 100px 50px;
+    padding: 20px 50px 25px;
     position: absolute;
     width: 100%;
     border-top-left-radius: 180px;

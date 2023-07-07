@@ -1,53 +1,37 @@
 {
-  "filmes": [
-    {
-      "id": 1,
-      "titulo": "Animais fantasticos",
-      "ano": 2022,
-      "roteiro": "J.K Rowling",
-      "imagem": "foto.jpg"
-    },
-    {
-      "titulo": "Sonic 2",
-      "ano": 2022,
-      "roteiro": "Patrik Casey",
-      "imagem": "https://upload.wikimedia.org/wikipedia/pt/b/b0/Sonic_the_Hedgehog_2_Poster.jpg",
-      "id": 2
-    }
-  ],
   "cadastro": [
-    {
-      "id": 1,
-      "nome": "Eduardo",
-      "email": "eduardojose59@hotmail.com",
-      "telefone": "81988692798",
-      "senha": "teste123"
-    },
     {
       "nome": "Jordan",
       "email": "jordan@gmail.com",
       "telefone": "81988996686",
       "senha": "jordan123",
-      "id": 2
+      "id": 1
     },
     {
       "nome": "Eduardo josé da silva",
       "email": "ejss@discente.ifpe.edu.br",
       "telefone": "(81) 98869-2798",
       "senha": "123456",
-      "id": 3
+      "id": 2
     },
     {
       "nome": "Maicon",
       "email": "maicon@gmail.com",
       "telefone": "(81) 66666-6666",
       "senha": "teste",
-      "id": 4
+      "id": 3
     },
     {
       "nome": "Joseph",
       "email": "joseph@gmail.com",
       "telefone": "(81) 55555-5555",
+      "senha": "123456",
+      "id": 4
+    },
+    {
+      "nome": "Adonai Vieira Don Don",
+      "email": "adonai@gmail.com",
+      "telefone": "(81) 98888-8888",
       "senha": "123456",
       "id": 5
     }

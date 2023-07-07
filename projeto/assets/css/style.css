@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito+Sans:wght@400;700&display=swap');
 :root{
-    --color-white: #FFFFFF;
+    --color-white: #f7f7f7;
 
     --color-dark1: rgb(39, 39, 39);
     --color-dark2: #2d2d2d;
@@ -11,6 +11,7 @@
     --color-purple: #b040ff;
 
     --color-deepNavyBlue: #001f3f;
+    --color-deepNavyBlueCl: #012c57;
     --color-darkGrey: #36454F;
     --color-mossGreen: #607D5B;
     --color-mustardYellow: #FFC857;
@@ -18,6 +19,7 @@
     --color-blue: #007bff;
 
     --color-error: #ff0000;
+    --color-grey: #ccc;
 }
 *{
     margin: 0;
@@ -334,7 +336,7 @@ fieldset {
 .input-caixa input[type="password"]{
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-grey);
     border-radius: 5px;
     font-size: 14px;
     color: var(--color-dark3);
@@ -474,3 +476,149 @@ fieldset {
         height: 130vh;
     }
 }
+
+.padding {
+    padding: 10px;
+}
+
+/* icone usuario logado */
+
+.user-icon {
+    display: none;
+    background-color: var(--color-dark3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.user-icon:hover {
+    background-color: var(--color-mossGreen);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.user-icon i {
+    color: var(--color-burntOrange);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.user-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 9999;
+    margin-top: 55px;
+    margin-right: 135px;
+}
+
+.user-modal.open {
+    display: block;
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
+/* css contato */
+
+#container_contact{
+    background-color: var(--color-white);
+}
+
+.col-md{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.text_title {
+    color: var(--color-deepNavyBlue);
+    font-weight: 400;
+    margin-left: 30px;
+    font-size: 4rem;
+    margin-top: 70px;
+}
+
+.pr_title{
+    color: var(--color-deepNavyBlue);
+    font-weight: 500;
+    margin-left: 30px;
+    margin-top: 70px;
+    font-size: 1.1rem;
+}
+
+.contact {
+    width: 100%;
+    max-width: 900px;
+    justify-content: flex-start;
+    margin-left: 30px;
+    padding: 20px;
+  }
+  
+  .form-contact {
+    margin-bottom: 20px;
+  }
+  
+  .inputs-contact {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .input-caixa-contact {
+    margin-bottom: 20px;
+  }
+  
+  .input-caixa-contact label {
+    color: var(--color-deepNavyBlue);
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .input-caixa-contact input,
+  .input-caixa-contact textarea,
+  .input-caixa-contact select {
+    width: 65vw;
+    padding: 10px;
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+    height: 40px;
+  }
+  
+  .input-caixa-contact textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .input-caixa-contact p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: var(--color-deepNavyBlue);
+  }
+  
+  .enviar_contact button {
+    padding: 10px 20px;
+    background-color: var(--color-deepNavyBlue);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .enviar_contact button:hover {
+    background-color: var(--color-deepNavyBlueCl);
+  }
+  
