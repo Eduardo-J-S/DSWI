@@ -18,7 +18,9 @@ form.addEventListener('submit', (event) => {
     .then(e=>{
         e.cadastro.map((item)=>{
             if(item.email === email && item.senha === senha){
+                const primeiraLetra = item.nome.charAt(0);
                 localStorage.setItem('loggedIn', 'true');
+                localStorage.setItem('letraNome', primeiraLetra)
                 return window.location.href = 'home.html';
             }
         })

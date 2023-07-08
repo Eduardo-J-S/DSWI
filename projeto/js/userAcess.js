@@ -3,12 +3,25 @@ document.addEventListener('DOMContentLoaded', function() {
     let menuAcess = document.getElementById('menu_cadastro')
     let loggedIn = localStorage.getItem('loggedIn');
     let userIcon = document.getElementById('userIcon');
+
+    let div = document.createElement("div")
+    let inicialNome = localStorage.getItem('letraNome');
+    let estrutura;
+
+    if(inicialNome === null){
+      estrutura = `<span class="letra"></span>`
+    } else{
+      estrutura = `<span class="letra">${inicialNome}</span>`
+    }
   
     if (loggedIn === 'true') {
       // Exibe o ícone da conta do usuário
       userIcon.style.display = 'block';
       menuAcess.style.display = 'none';
-      console.log('verdadeiro')
+
+      div.innerHTML = estrutura
+
+      AlocarLetra.appendChild(div)
     } else {
       // Oculta o ícone da conta do usuário
       userIcon.style.display = 'none';
@@ -30,9 +43,14 @@ window.addEventListener('click', function(event) {
     }
 });
 
+// Adicionar evento de rolagem para fechar o modal
+window.addEventListener('scroll', function() {
+  userModal.classList.remove('open');
+});
+
 
 // Obtém o elemento do botão de sair
-const sairButton = document.querySelector('#userModal button');
+const sairButton = document.getElementById('userSair');
 
 // Adiciona o ouvinte de evento ao botão
 sairButton.addEventListener('click', () => {
@@ -43,4 +61,5 @@ sairButton.addEventListener('click', () => {
   // Recarrega a página
   window.location.reload();
 });
+
 

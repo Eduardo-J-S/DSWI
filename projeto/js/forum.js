@@ -3,6 +3,5 @@ document.addEventListener('DOMContentLoaded', function() {
   
     if (loggedIn === 'false') {
       window.location.href = 'login.html';
-      console.log('verdadeiro')
     }
 });

@@ -6,6 +6,7 @@
     <script src="../js/sidebar.js" defer></script>
     <script src="../js/userAcess.js" defer></script>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -44,8 +45,7 @@
                 </div>
             </div>
             <div id="userIcon" class="user-icon">
-                <i class="fa-regular fa-user"></i>
-                <i class="fa-solid fa-caret-down"></i>
+                <div id="AlocarLetra" class="AlocarLetra"></div>
                 <div id="userModal" class="user-modal">
                     <div class="modal-content">
                         <button id="userSair">Sair</button>
@@ -54,7 +54,7 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main onfocus="closeSidebar()">
         <div class="col-md">
             <h1 class="text_title">Contato</h1>
             <p class="pr_title">Utilize este formulário para entrar em contato conosco, enviando suas dúvidas, ou sugestões.</p>
@@ -103,6 +103,31 @@
             </form>
         </div>
     </main>
-    
+    <footer>
+        <div class="midias_sociais">
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <ul class="links">
+            <li>
+                <a href="home.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">Sobre</a>
+            </li>
+            <li>
+                <a href="forum.html">Fórum</a>
+            </li>
+            <li>
+                <a href="contact.html">Contato</a>
+            </li>
+        </ul>
+        <div class="line"></div>
+        <p class="copyright">
+            Eduardo-J-S @ 2023
+        </p>
+    </footer>
 </body>
 </html>

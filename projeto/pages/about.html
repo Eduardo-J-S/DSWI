@@ -6,12 +6,13 @@
     <script src="../js/sidebar.js" defer></script>
     <script src="../js/userAcess.js" defer></script>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Sobre</title>
 </head>
-<body>
+<body id="container_about">
     <header class="header" id="header">
         <button onclick="toggleSidebar()" class="btn_icon_header">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
@@ -44,8 +45,7 @@
                 </div>
             </div>
             <div id="userIcon" class="user-icon">
-                <i class="fa-regular fa-user"></i>
-                <i class="fa-solid fa-caret-down"></i>
+                <div id="AlocarLetra" class="AlocarLetra"></div>
                 <div id="userModal" class="user-modal">
                     <div class="modal-content">
                         <button id="userSair">Sair</button>
@@ -54,6 +54,43 @@
             </div>
         </nav>
     </header>
-    <h1>TESTE REDIRECIONAMENTO</h1>
+    <main>
+        <div class="container-fluid">
+            <div class="hero__container">
+                <h1 class="hero__title">Sobre</h1>
+            </div>
+        </div>
+        <div class="container__body">
+            <h2 class="title__welcome">Bem-vindo!</h2>
+            <p class="pr__bd">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula nisi non dui convallis gravida. Aliquam mollis magna nec ligula lacinia aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis a ante nisl. Suspendisse viverra purus dictum, faucibus diam sit amet, faucibus ex. Praesent lobortis eleifend blandit. Nulla facilisi. In bibendum libero non varius dignissim. Aenean dignissim nunc sed risus ultricies porta. Sed tempus metus erat, in efficitur ante imperdiet vitae. In placerat ex in vehicula venenatis. Phasellus id luctus magna. Nulla mattis lorem id rutrum vestibulum.</p>
+            <p class="pr__bd">Phasellus euismod nunc eu scelerisque convallis. Nam dui ante, tincidunt sed rhoncus vitae, consequat ac dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eget pharetra erat, vitae venenatis tellus. Nunc a interdum elit. Donec rhoncus diam et sapien convallis auctor. Duis blandit luctus turpis, eget interdum velit efficitur et. Vestibulum est est, cursus quis lectus ac, imperdiet rhoncus libero. Cras ut enim et justo laoreet rhoncus in non massa. Aliquam porttitor ultrices accumsan. Donec mollis sodales velit, vel pellentesque sem lobortis ut. Mauris in vestibulum neque. Cras condimentum, mi in pulvinar tempus, lacus tellus venenatis diam, a rutrum nibh lectus id massa.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="midias_sociais">
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <ul class="links">
+            <li>
+                <a href="home.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">Sobre</a>
+            </li>
+            <li>
+                <a href="forum.html">Fórum</a>
+            </li>
+            <li>
+                <a href="contact.html">Contato</a>
+            </li>
+        </ul>
+        <div class="line"></div>
+        <p class="copyright">
+            Eduardo-J-S @ 2023
+        </p>
+    </footer>
 </body>
 </html>

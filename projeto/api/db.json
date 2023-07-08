@@ -34,6 +34,13 @@
       "telefone": "(81) 98888-8888",
       "senha": "123456",
       "id": 5
+    },
+    {
+      "nome": "Eduardo josé da silva",
+      "email": "eduardojose59@hotmail.com",
+      "telefone": "(81) 98869-2798",
+      "senha": "123",
+      "id": 6
     }
   ]
 }
