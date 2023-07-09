@@ -41,6 +41,13 @@
       "telefone": "(81) 98869-2798",
       "senha": "123",
       "id": 6
+    },
+    {
+      "nome": "Bianca",
+      "email": "bianca@gmail.com",
+      "telefone": "(81) 88888-8888",
+      "senha": "123",
+      "id": 7
     }
   ]
 }

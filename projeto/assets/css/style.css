@@ -805,4 +805,19 @@ fieldset {
     margin-bottom: 20px;
     line-height: 1.5;
     font-size: 18px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    .container__body {
+        padding: 50px 14px;
+    }
+    
+    .hero__container {
+        right: 0;
+        left: 0;
+    }
+    .hero__title {
+        font-size: 4.5rem;
+    }
 }

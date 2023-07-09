@@ -47,6 +47,7 @@
 .modal-body p {
     margin-bottom: 10px;
     color: #000000;
+    text-align: justify;
 }
 
 @media screen and (max-width: 768px) {
