@@ -62,11 +62,3 @@ form.addEventListener('submit', (event) => {
             console.error('Erro ao cadastrar usuário:', error);
         });
 });
-
-
-function beforeLogin(){
-    // Exibe o ícone da conta do usuário
-    document.getElementById('userIcon').style.display = 'block';
-    // Oculta os botões "Login" e "Cadastro"
-    document.getElementById('menu_cadastro').style.display = 'none';
-}

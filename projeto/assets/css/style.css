@@ -292,7 +292,7 @@ body {
     padding: 20px;
     background-color: var(--color-white);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 100vh;
+    height: 110vh;
 }
 
 .title {
@@ -300,6 +300,13 @@ body {
     margin-top: 10px;
     color: var(--color-deepNavyBlue);
     margin-bottom: 10px;
+}
+
+.title__login {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--color-deepNavyBlue);
+    margin-bottom: 30px;
 }
 
 fieldset {
@@ -310,6 +317,10 @@ fieldset {
 
 .container-cadastro {
     display: flex;
+}
+
+.social__media__login {
+    margin-bottom: 30px;
 }
 
 .list-social-media {
@@ -432,6 +443,29 @@ fieldset {
     margin-top: 0;
 }
 
+.img_logo_register {
+    height: 10vh;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img_logo_register:hover {
+    transform: scale(1.1);
+
+}
+
+.img_logo_login {
+    height: 10vh;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 25px;
+}
+
+.img_logo_login:hover {
+    transform: scale(1.1);
+  }
+
+
 .erroSenha {
     color: var(--color-error);
     margin-bottom: 8px;
@@ -450,7 +484,7 @@ fieldset {
 
 @media screen and (width: 414px) and (height: 896px) {
     .form-cadastro {
-        height: 80vh;
+        height: 90vh;
     }
 }
 
@@ -771,7 +805,7 @@ fieldset {
     bottom: -50px;
     height: 180px;
     left: 40px;
-    right: 970px;
+    right: 71%;
     background-color: var(--color-deepNavyBlueCl);
     padding: 30px;
     box-sizing: border-box;
@@ -819,5 +853,12 @@ fieldset {
     }
     .hero__title {
         font-size: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 1266px) {
+    .hero__container {
+        left: 0;
+        right: 0;
     }
 }

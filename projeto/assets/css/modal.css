@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito+Sans:wght@400;700&display=swap');
+
+
 #modal {
     display: none; /* Oculta o modal inicialmente */
     position: fixed;
@@ -47,11 +50,44 @@
 .modal-body p {
     margin-bottom: 10px;
     color: #000000;
-    text-align: justify;
+    /* text-align: justify; */
+}
+
+.modal-content input[type="text"] {
+    width: 85%;
+    height: 30px;
+    resize: none;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
     .modal-content {
         width: 85%;
     }
+}
+
+#results .local__venda {
+    text-align: center;
+    font-weight: bold;
+}
+
+#results .local__venda a {
+    color: #ff0000;
+    font-size: 12px;
+}
+
+#searchButton {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #0000ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#searchButton:hover {
+    background-color: #000099;
 }
