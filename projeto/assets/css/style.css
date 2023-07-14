@@ -610,6 +610,50 @@ fieldset {
     /* A letra não responderá a eventos de clique */
 }
 
+.modal-content-perfil {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.perfilUser {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+  }
+
+  
+  .perfilUser:hover {
+    background-color: #ff5500;
+  }
+  
+  /* .sairUser {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sairUser:hover {
+    color: #ff6600;
+  } */
+  
+
 
 /* css contato */
 

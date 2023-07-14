@@ -17,12 +17,6 @@ form.addEventListener('submit', (event) => {
     const senha = document.getElementById('senha').value;
     const confirmarSenha = document.getElementById('confirmarSenha').value;
 
-    console.log(nome);
-    console.log(email);
-    console.log(telefone);
-    console.log(senha);
-    console.log(confirmarSenha);
-
     let erroContent = document.createElement("div");
 
     estrutura = `<p class="erroSenha">Erro: As senhas não correspondem.</p>`
@@ -40,7 +34,8 @@ form.addEventListener('submit', (event) => {
         nome: nome,
         email: email,
         telefone: telefone,
-        senha: senha
+        senha: senha,
+        meusLivros: [],
     };
 
     // Realiza o POST usando fetch

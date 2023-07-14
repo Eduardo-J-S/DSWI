@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let menuAcess = document.getElementById('menu_cadastro')
     let loggedIn = localStorage.getItem('loggedIn');
     let userIcon = document.getElementById('userIcon');
+    
 
     let div = document.createElement("div")
     let inicialNome = localStorage.getItem('letraNome');
@@ -61,5 +62,3 @@ sairButton.addEventListener('click', () => {
   // Recarrega a página
   window.location.reload();
 });
-
-

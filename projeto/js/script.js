@@ -12,48 +12,55 @@ function fetchBooks() {
     fetch(url)
     .then(response => response.json())
     .then(data => {
-        // Processar os dados da resposta da API
+        
         const items = data.items;
+        const comprar = [];
 
         let contBooks = 0;
-        let buyLink;
-        let listPrice;
-        let currencyCode
-        // Iterar sobre os itens e exibir as informações de venda dos livros com o mesmo título
-        items.forEach(item => {
-        const title = item.volumeInfo.title;
-
-        // Verificar se o título do livro corresponde à consulta
-        if (title === query) {
-            if (item.saleInfo.saleability === 'FOR_SALE') {
-                buyLink = item.saleInfo.buyLink;
-                listPrice = item.saleInfo.listPrice.amount;
-                currencyCode = item.saleInfo.listPrice.currencyCode;
-
-                contBooks++;
-            }
-        } 
-        });
-
-        let estruturaResults;
-
-        if(contBooks === 0){
-            estruturaResults = `<p class="preco__venda">Nenhum resultado encontrado</p>
-        `
-        } else {
-            estruturaResults = `<p class="preco__venda">Preço de venda: ${listPrice} ${currencyCode}</p>
-        <div class="local__venda"><a href="${buyLink}" target="_blank">Clique aqui para acessar o site</a>
-        </div>
-        `
-        }
-
-        let divResuts = document.createElement("div")
 
         
+        items.forEach(item => {
+            const title = item.volumeInfo.title;
 
-        divResuts.innerHTML = estruturaResults
+            // Verificar se o título do livro corresponde à consulta
+            if (title === query) {
+                if (item.saleInfo.saleability === 'FOR_SALE') {
 
-        results.appendChild(divResuts)
+                    let obj = {
+                        buyLink: item.saleInfo.buyLink,
+                        listPrice: item.saleInfo.listPrice.amount,
+                        currencyCode: item.saleInfo.listPrice.currencyCode
+                    }
+
+                    comprar.push(obj)
+
+                    contBooks++;
+                }
+            } 
+        });
+
+        if (contBooks === 0) {
+            let estruturaResults = `<p class="preco__venda">Nenhum resultado encontrado</p>`;
+          
+            let divResults = document.createElement("div");
+            divResults.innerHTML = estruturaResults;
+            results.appendChild(divResults);
+          } else {
+            comprar.map((call) => {
+              let estruturaResults = `
+                <p class="preco__venda">Preço de venda: ${call.listPrice} ${call.currencyCode}</p>
+                <div class="local__venda">
+                  <a href="${call.buyLink}" target="_blank">Clique aqui para acessar o site</a>
+                </div>
+              `;
+          
+              let divResults = document.createElement("div");
+              divResults.innerHTML = estruturaResults;
+              results.appendChild(divResults);
+            });
+          }
+          
+        
     })
     .catch(error => {
         console.error(error);
@@ -111,22 +118,99 @@ fetch('../api/db.json')
       
                 clickCount++;
               }
-        }
+            }
         });
-      
+        
         modalContent.innerHTML = modalStructure;
-      
+
+       
         let modal = document.getElementById("modal");
         modal.style.display = "block";
-        modal.innerHTML = ""; // Limpa o conteúdo anterior
+        modal.innerHTML = ""; 
         modal.appendChild(modalContent);
       
         // Fecha o modal quando o usuário clica no botão de fechar
         let closeButton = modalContent.querySelector(".close");
         closeButton.addEventListener("click", () => {
             modal.style.display = "none";
-            modal.innerHTML = ""; // Limpa o conteúdo do modal ao fechar
+            modal.innerHTML = ""; 
         });
+
+
+
+        
+
+
+        const user = JSON.parse(localStorage.getItem('user')); 
+        let loggedIn = localStorage.getItem('loggedIn');
+        console.log(user)
+        console.log(user.meusLivros)
+
+        if (loggedIn === 'true') {
+            let plusButtons = modalContent.querySelectorAll(".data-title");
+            plusButtons.forEach((button) => {
+                let plusButton = document.createElement("button");
+                plusButton.innerHTML = "+";
+                plusButton.classList.add("add-button");
+                button.appendChild(plusButton);
+
+                const idLivro = obj.id
+                
+                if (user.meusLivros.includes(idLivro)) {
+                    plusButton.innerHTML = "-";
+                }
+                
+                plusButton.addEventListener("click", () => {
+                    
+                    const idLivro = obj.id;
+
+                    const data = {
+                        nome: user.nome,
+                        email: user.email,
+                        telefone: user.telefone,
+                        senha: user.senha,
+                        meusLivros: [],
+                        id: user.id
+                    }
+
+                    if (user.meusLivros.includes(idLivro)) {
+                        data.meusLivros = user.meusLivros.filter((livroId) => livroId !== idLivro);
+                    } else {
+                        data.meusLivros = [...user.meusLivros, idLivro];
+                    }
+
+                    fetch(`http://localhost:3000/cadastro/${user.id}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data),
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            console.log('Livro adicionado com sucesso');
+                            fetch('../api/db.json')
+                            .then(e=>e.json())
+                            .then(e=>{
+                                e.cadastro.map((item)=>{
+                                    if(item.email === user.email && item.senha === user.senha){
+                                        localStorage.setItem('user', JSON.stringify(item));
+                                    }
+                                })
+
+                            })
+                        } else {
+                            console.error('Erro ao adicionar o livro');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro na requisição:', error);
+                    });
+                });
+            });
+        }
+
+
     }
       
     function add_card(obj){
@@ -162,4 +246,3 @@ fetch('../api/db.json')
 
     e.livros.map(add_card)
 })
-

@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <script src="../js/script.js" defer></script>
     <script src="../js/sidebar.js" defer></script>
     <script src="../js/userAcess.js" defer></script>
+    <script src="../js/user.js" defer></script>
+    <link rel="stylesheet" href="../assets/css/user.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Sobre</title>
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body id="container_about">
+
+<body id="body">
     <header class="header" id="header">
         <button onclick="toggleSidebar()" class="btn_icon_header">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
@@ -49,7 +55,7 @@
                 <div id="userModal" class="user-modal">
                     <div class="modal-content-perfil">
                         <div class="pr_user">
-                            <a href="user.html"> <button id="perfilUser" class="perfilUser" >Perfil</button></a>
+                            <button id="perfilUser" class="perfilUser" >Perfil</button>
                         </div>
                         <div class="sairUser">
                             <button id="userSair" class="perfilUser" >Sair</button>
@@ -59,17 +65,23 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div class="container-fluid">
-            <div class="hero__container">
-                <h1 class="hero__title">Sobre</h1>
+    <main tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+        <section class="profile-section">
+            <div class="profile-icon" id="profile-icon">
+                <!-- Profile icon with initial letter -->
             </div>
-        </div>
-        <div class="container__body">
-            <h2 class="title__welcome">Bem-vindo!</h2>
-            <p class="pr__bd">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula nisi non dui convallis gravida. Aliquam mollis magna nec ligula lacinia aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis a ante nisl. Suspendisse viverra purus dictum, faucibus diam sit amet, faucibus ex. Praesent lobortis eleifend blandit. Nulla facilisi. In bibendum libero non varius dignissim. Aenean dignissim nunc sed risus ultricies porta. Sed tempus metus erat, in efficitur ante imperdiet vitae. In placerat ex in vehicula venenatis. Phasellus id luctus magna. Nulla mattis lorem id rutrum vestibulum.</p>
-            <p class="pr__bd">Phasellus euismod nunc eu scelerisque convallis. Nam dui ante, tincidunt sed rhoncus vitae, consequat ac dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eget pharetra erat, vitae venenatis tellus. Nunc a interdum elit. Donec rhoncus diam et sapien convallis auctor. Duis blandit luctus turpis, eget interdum velit efficitur et. Vestibulum est est, cursus quis lectus ac, imperdiet rhoncus libero. Cras ut enim et justo laoreet rhoncus in non massa. Aliquam porttitor ultrices accumsan. Donec mollis sodales velit, vel pellentesque sem lobortis ut. Mauris in vestibulum neque. Cras condimentum, mi in pulvinar tempus, lacus tellus venenatis diam, a rutrum nibh lectus id massa.</p>
-        </div>
+            <div class="profile-details">
+                <h2 class="profile-name" id="profile-name"></h2>
+                <p class="profile-email" id="profile-email"></p>
+                <!-- Additional profile information -->
+            </div>
+        </section>
+        <section class="books-section">
+            <h2 class="section-heading">Meus Livros</h2>
+            <div id="my-books" class="book-list">
+                <!-- Books added by the user will be dynamically added here -->
+            </div>
+        </section>
     </main>
     <footer>
         <div class="midias_sociais">
@@ -98,4 +110,5 @@
         </p>
     </footer>
 </body>
+
 </html>

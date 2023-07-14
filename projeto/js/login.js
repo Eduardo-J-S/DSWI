@@ -21,6 +21,7 @@ form.addEventListener('submit', (event) => {
                 const primeiraLetra = item.nome.charAt(0);
                 localStorage.setItem('loggedIn', 'true');
                 localStorage.setItem('letraNome', primeiraLetra)
+                localStorage.setItem('user', JSON.stringify(item));
                 return window.location.href = 'home.html';
             }
         })

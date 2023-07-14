@@ -5,6 +5,7 @@
       "email": "jordan@gmail.com",
       "telefone": "81988996686",
       "senha": "jordan123",
+      "meusLivros": [],
       "id": 1
     },
     {
@@ -12,6 +13,7 @@
       "email": "ejss@discente.ifpe.edu.br",
       "telefone": "(81) 98869-2798",
       "senha": "123456",
+      "meusLivros": [],
       "id": 2
     },
     {
@@ -19,6 +21,7 @@
       "email": "maicon@gmail.com",
       "telefone": "(81) 66666-6666",
       "senha": "teste",
+      "meusLivros": [],
       "id": 3
     },
     {
@@ -26,6 +29,7 @@
       "email": "joseph@gmail.com",
       "telefone": "(81) 55555-5555",
       "senha": "123456",
+      "meusLivros": [],
       "id": 4
     },
     {
@@ -33,6 +37,15 @@
       "email": "adonai@gmail.com",
       "telefone": "(81) 98888-8888",
       "senha": "123456",
+      "meusLivros": [
+        1,
+        2,
+        4,
+        7,
+        3,
+        5,
+        6
+      ],
       "id": 5
     },
     {
@@ -40,6 +53,7 @@
       "email": "eduardojose59@hotmail.com",
       "telefone": "(81) 98869-2798",
       "senha": "123",
+      "meusLivros": [],
       "id": 6
     },
     {
@@ -47,7 +61,16 @@
       "email": "bianca@gmail.com",
       "telefone": "(81) 88888-8888",
       "senha": "123",
+      "meusLivros": [],
       "id": 7
+    },
+    {
+      "nome": "Lucia",
+      "email": "lucia@gmail.com",
+      "telefone": "(81) 88996-6332",
+      "senha": "123456",
+      "meusLivros": [],
+      "id": 8
     }
   ],
   "livros": [
@@ -66,7 +89,8 @@
       "ano": "2018",
       "paginas": "312",
       "preco": 69,
-      "estoque": "Disponível também em formato ebook"
+      "estoque": "Disponível também em formato ebook",
+      "id": 1
     },
     {
       "imgCapa": "https://s3.novatec.com.br/capas/9788575226674.jpg",
@@ -83,7 +107,8 @@
       "ano": "2018",
       "paginas": "576",
       "preco": 120,
-      "estoque": "Disponível também em formato ebook"
+      "estoque": "Disponível também em formato ebook",
+      "id": 2
     },
     {
       "imgCapa": "https://s3.novatec.com.br/capas/9788575226681.jpg",
@@ -101,7 +126,8 @@
       "ano": "2018",
       "paginas": "176",
       "preco": 52,
-      "estoque": "Disponível também em formato ebook"
+      "estoque": "Disponível também em formato ebook",
+      "id": 3
     },
     {
       "imgCapa": "https://s3.novatec.com.br/capas/9788575226568.jpg",
@@ -118,7 +144,8 @@
       "ano": "2018",
       "paginas": "320",
       "preco": 69,
-      "estoque": "Disponível também em formato ebook"
+      "estoque": "Disponível também em formato ebook",
+      "id": 4
     },
     {
       "imgCapa": "https://s3.novatec.com.br/capas/9788575225905.jpg",
@@ -136,7 +163,8 @@
       "ano": "2017",
       "paginas": "544",
       "preco": 99,
-      "estoque": "Disponível também em formato ebook"
+      "estoque": "Disponível também em formato ebook",
+      "id": 5
     },
     {
       "imgCapa": "https://s3.novatec.com.br/capas/9788575225462.jpg",
@@ -156,7 +184,8 @@
       "ano": "2017",
       "paginas": "480",
       "preco": 98,
-      "estoque": ""
+      "estoque": "",
+      "id": 6
     },
     {
       "imgCapa": "https://s3.novatec.com.br/capas/9788575225462.jpg",
@@ -176,7 +205,8 @@
       "ano": "2017",
       "paginas": "480",
       "preco": 98,
-      "estoque": ""
+      "estoque": "",
+      "id": 7
     }
   ]
 }
