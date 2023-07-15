@@ -65,7 +65,7 @@
                     <li class="input-caixa">
                         <label for="senha">Senha</label>
                         <fieldset>
-                            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                            <input onkeyup="verifyPass()" type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
                         </fieldset>
                     </li>
                     <li class="input-caixa">
@@ -77,10 +77,17 @@
                     </li>
                 </ul>
 
+                <div class="info">
+                    <div class="feed" id="feed-1">Número de caracteres: Mínimo 8</div>
+                    <div class="feed" id="feed-2">Letras Maiúscula: ABC</div>
+                    <div class="feed" id="feed-3">Números: Entre 0 a 9</div>
+                    <div class="feed" id="feed-4">Caracteres especiais: @$%&!</div>                    
+                </div>
+
                 <div id="error" class="error"></div>
 
                 <div class="registrar">
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" disabled>Cadastrar</button>
                 </div>
 
                 <nav class="login-button">

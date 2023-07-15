@@ -3,6 +3,8 @@ $(document).ready(function() {
 });
 
 const form = document.getElementById('cadastro-form');
+const senhaInput = document.getElementById('senha');
+const cadastrarButton = document.querySelector('.registrar button');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault(); // Impede o envio padrão do formulário
@@ -57,3 +59,62 @@ form.addEventListener('submit', (event) => {
             console.error('Erro ao cadastrar usuário:', error);
         });
 });
+
+function verifyPass(){
+    let senha = senhaInput.value;
+    let feeds = Array.from(document.getElementsByClassName("feed"));
+
+    let maiuscula = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+    let numeros = "0123456789";
+    let especiais = "@$%&!"; 
+
+    let m = [];
+    let n = [];
+    let e = [];
+
+
+    function estilo(f, s) {
+        let es = ["#2fdc2f", "#ff383b"];
+        feeds[f].style.color = es[s];
+    }
+    
+    if(senha.length >= 8){
+        estilo(0,0);
+    } else {
+        estilo(0, 1)
+    }
+
+    for (index = 0; index < senha.length; index++) {
+       m.push(maiuscula.indexOf(senha.charAt(index)));
+       let maxM = Math.max.apply(null, m);
+       if(maxM>=0){
+        estilo(1,0);
+       } else {
+        estilo(1,1);
+       }
+
+       n.push(numeros.indexOf(senha.charAt(index)));
+       let maxN = Math.max.apply(null, n);
+       if(maxN>=0){
+        estilo(2,0);
+       } else {
+        estilo(2,1);
+       }
+
+       e.push(especiais.indexOf(senha.charAt(index)));
+       let maxE = Math.max.apply(null, e);
+       if(maxE>=0){
+        estilo(3,0);
+       } else {
+        estilo(3,1);
+       }
+    }
+
+    if (senha.length === 0) {
+        estilo(0, 1);
+    }
+
+       // Verificar o estado das verificações e habilitar/desabilitar o botão de cadastro
+    const allGreen = feeds.every((feed) => feed.style.color === 'rgb(47, 220, 47)');
+    cadastrarButton.disabled = !allGreen;
+}

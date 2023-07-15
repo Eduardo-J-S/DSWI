@@ -46,9 +46,9 @@ fetch('../api/db.json')
         bookAuthor.textContent = livro.autores.autor1;
         bookItem.appendChild(bookAuthor);
 
-        bookItem.appendChild(bookTitle);
-        bookItem.appendChild(bookImage);
-        bookItem.appendChild(bookAuthor);
+        // bookItem.appendChild(bookTitle);
+        // bookItem.appendChild(bookImage);
+        // bookItem.appendChild(bookAuthor);
 
                 
         bookList.appendChild(bookItem);
