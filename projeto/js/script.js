@@ -33,7 +33,7 @@ function fetchBooks() {
                     }
 
                     comprar.push(obj)
-
+                    
                     contBooks++;
                 }
             } 
@@ -143,8 +143,6 @@ fetch('../api/db.json')
 
         const user = JSON.parse(localStorage.getItem('user')); 
         let loggedIn = localStorage.getItem('loggedIn');
-        console.log(user)
-        console.log(user.meusLivros)
 
         if (loggedIn === 'true') {
             let plusButtons = modalContent.querySelectorAll(".data-title");
@@ -162,6 +160,8 @@ fetch('../api/db.json')
                 
                 plusButton.addEventListener("click", () => {
                     
+                    const currentPerguntas = user.minhasPerguntas;
+
                     const idLivro = obj.id;
 
                     const data = {
@@ -170,6 +170,7 @@ fetch('../api/db.json')
                         telefone: user.telefone,
                         senha: user.senha,
                         meusLivros: [],
+                        minhasPerguntas: user.minhasPerguntas,
                         id: user.id
                     }
 

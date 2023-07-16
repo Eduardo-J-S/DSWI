@@ -11,6 +11,10 @@
     gap: 20px;
     margin-bottom: 30px;
   }
+
+  .height__main {
+    height: 80vh;
+  }
   
   .profile-icon {
     width: 80px;

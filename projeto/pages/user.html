@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <title>Meus Livros</title>
     <script src="../js/script.js" defer></script>
     <script src="../js/sidebar.js" defer></script>
     <script src="../js/userAcess.js" defer></script>
@@ -55,7 +55,10 @@
                 <div id="userModal" class="user-modal">
                     <div class="modal-content-perfil">
                         <div class="pr_user">
-                            <button id="perfilUser" class="perfilUser" >Perfil</button>
+                            <a href="minhasPerguntas.html"><button id="perfilUser" class="perfilUser">Minhas Perguntas</button></a>
+                        </div>
+                        <div class="pr_user">
+                            <a href="user.html"><button id="perfilUser" class="perfilUser">Meus Livros</button></a>
                         </div>
                         <div class="sairUser">
                             <button id="userSair" class="perfilUser" >Sair</button>
@@ -65,21 +68,18 @@
             </div>
         </nav>
     </header>
-    <main tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+    <main tabindex="0" class="content height__main" onfocus="closeSidebar()" id="content">
         <section class="profile-section">
             <div class="profile-icon" id="profile-icon">
-                <!-- Profile icon with initial letter -->
             </div>
             <div class="profile-details">
                 <h2 class="profile-name" id="profile-name"></h2>
                 <p class="profile-email" id="profile-email"></p>
-                <!-- Additional profile information -->
             </div>
         </section>
         <section class="books-section">
-            <h2 class="section-heading">Meus Livros</h2>
+            <h2 class="section-heading">Meus Livros Favoritos</h2>
             <div id="my-books" class="book-list">
-                <!-- Books added by the user will be dynamically added here -->
             </div>
         </section>
     </main>

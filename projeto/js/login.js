@@ -5,6 +5,12 @@ form.addEventListener('submit', (event) => {
 
     const userIcon = document.getElementById('userIcon');
 
+    let erroContent = document.createElement("div");
+
+    estrutura = `<p class="erroSenha">Usuário ou senha incorretos.</p>`
+
+    erroContent.innerHTML = estrutura
+
     if (userIcon) {
         console.log('Entrou')
         userIcon.style.display = 'block';
@@ -25,6 +31,8 @@ form.addEventListener('submit', (event) => {
                 return window.location.href = 'home.html';
             }
         })
+        
+        return error.appendChild(erroContent)
 
     })
 });

@@ -1,36 +1,13 @@
 {
   "cadastro": [
     {
-      "nome": "Jordan",
-      "email": "jordan@gmail.com",
-      "telefone": "81988996686",
-      "senha": "jordan123",
-      "meusLivros": [],
-      "id": 1
-    },
-    {
-      "nome": "Eduardo josé da silva",
-      "email": "ejss@discente.ifpe.edu.br",
-      "telefone": "(81) 98869-2798",
-      "senha": "123456",
-      "meusLivros": [],
-      "id": 2
-    },
-    {
-      "nome": "Maicon",
-      "email": "maicon@gmail.com",
-      "telefone": "(81) 66666-6666",
-      "senha": "teste",
-      "meusLivros": [],
-      "id": 3
-    },
-    {
       "nome": "Joseph",
       "email": "joseph@gmail.com",
       "telefone": "(81) 55555-5555",
       "senha": "123456",
       "meusLivros": [],
-      "id": 4
+      "minhasPerguntas": [],
+      "id": 1
     },
     {
       "nome": "Adonai Vieira Don Don",
@@ -41,27 +18,17 @@
         2,
         4,
         7,
-        3,
         5,
-        6
+        6,
+        1
       ],
-      "id": 5
-    },
-    {
-      "nome": "Eduardo josé da silva",
-      "email": "eduardojose59@hotmail.com",
-      "telefone": "(81) 98869-2798",
-      "senha": "123",
-      "meusLivros": [],
-      "id": 6
-    },
-    {
-      "nome": "Bianca",
-      "email": "bianca@gmail.com",
-      "telefone": "(81) 88888-8888",
-      "senha": "123",
-      "meusLivros": [],
-      "id": 7
+      "minhasPerguntas": [
+        1,
+        6,
+        7,
+        8
+      ],
+      "id": 2
     },
     {
       "nome": "Lucia",
@@ -74,7 +41,8 @@
         4,
         6
       ],
-      "id": 8
+      "minhasPerguntas": [],
+      "id": 3
     }
   ],
   "livros": [
@@ -211,6 +179,48 @@
       "preco": 98,
       "estoque": "",
       "id": 7
+    }
+  ],
+  "perguntas": [
+    {
+      "id": 1,
+      "title": "Doação de sangue",
+      "question": "Normalmente, quantos litros de sangue uma pessoa tem? Em média, quantos são retirados numa doação de sangue?"
+    },
+    {
+      "id": 2,
+      "title": "Famosa frase",
+      "question": "De quem é a famosa frase “Penso, logo existo”?"
+    },
+    {
+      "id": 3,
+      "title": "Presidente do Brasil",
+      "question": " Qual o nome do presidente do Brasil que ficou conhecido como Jango?"
+    },
+    {
+      "title": "Teste id",
+      "question": "teste",
+      "id": 4
+    },
+    {
+      "title": "outro teste",
+      "question": "testando",
+      "id": 5
+    },
+    {
+      "title": "Testando se vai pegar",
+      "question": "Será que pega?",
+      "id": 6
+    },
+    {
+      "title": "Teste atualização",
+      "question": "teste atualização",
+      "id": 7
+    },
+    {
+      "title": "pergunta",
+      "question": "teste",
+      "id": 8
     }
   ]
 }

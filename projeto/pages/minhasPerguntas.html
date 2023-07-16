@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livros Dev | Home</title>
+    <title>Minhas Perguntas</title>
     <script src="../js/script.js" defer></script>
     <script src="../js/sidebar.js" defer></script>
     <script src="../js/userAcess.js" defer></script>
-    <script src="https://www.googleapis.com/books/v1/volumes"></script>
+    <script src="../js/user.js" defer></script>
+    <link rel="stylesheet" href="../assets/css/user.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/cards.css">
-    <link rel="stylesheet" href="../assets/css/modal.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -59,7 +58,7 @@
                             <a href="minhasPerguntas.html"><button id="perfilUser" class="perfilUser">Minhas Perguntas</button></a>
                         </div>
                         <div class="pr_user">
-                            <a href="user.html"> <button id="perfilUser" class="perfilUser">Meus Livros</button></a>
+                            <a href="user.html"><button id="perfilUser" class="perfilUser">Meus Livros</button></a>
                         </div>
                         <div class="sairUser">
                             <button id="userSair" class="perfilUser" >Sair</button>
@@ -69,15 +68,20 @@
             </div>
         </nav>
     </header>
-    <main tabindex="0" class="content" onfocus="closeSidebar()" id="content">
-        <div class="image_top">
-            <h3 class="title__home">Explore e conecte-se: Compartilhe suas ideias no Fórum de [Tema]</h3>
-            <p class="pr__home">Bem-vindo(a) ao nosso site! <br> Explore os livros e seus locais de venda, navegue pelo fórum, participe
-                das discussões e faça parte dessa comunidade.<br> Juntos, podemos explorar e expandir nosso
-                conhecimento, trocando experiências e promovendo um diálogo enriquecedor.</p>
-        </div>
-        <div id="cards" class="cards"></div>
-        <div id="modal"></div>
+    <main tabindex="0" class="content height__main" onfocus="closeSidebar()" id="content">
+        <section class="profile-section">
+            <div class="profile-icon" id="profile-icon">
+            </div>
+            <div class="profile-details">
+                <h2 class="profile-name" id="profile-name"></h2>
+                <p class="profile-email" id="profile-email"></p>
+            </div>
+        </section>
+        <section class="books-section">
+            <h2 class="section-heading">Minhas Perguntas</h2>
+            <div id="my-books" class="book-list">
+            </div>
+        </section>
     </main>
     <footer>
         <div class="midias_sociais">

@@ -2,9 +2,10 @@ $(document).ready(function() {
     $('#telefone').inputmask('(99) 99999-9999');
 });
 
+let info = document.getElementById('info')
 const form = document.getElementById('cadastro-form');
 const senhaInput = document.getElementById('senha');
-const cadastrarButton = document.querySelector('.registrar button');
+const cadastrarButton = document.getElementById('btn-cadastrar');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault(); // Impede o envio padrão do formulário
@@ -21,7 +22,7 @@ form.addEventListener('submit', (event) => {
 
     let erroContent = document.createElement("div");
 
-    estrutura = `<p class="erroSenha">Erro: As senhas não correspondem.</p>`
+    estrutura = `<p class="erroSenha">Erro: As senhas são diferentes.</p>`
 
     if (senha !== confirmarSenha) {
         erroContent.innerHTML = estrutura
@@ -38,6 +39,7 @@ form.addEventListener('submit', (event) => {
         telefone: telefone,
         senha: senha,
         meusLivros: [],
+        minhasPerguntas: [],
     };
 
     // Realiza o POST usando fetch
@@ -59,14 +61,17 @@ form.addEventListener('submit', (event) => {
             console.error('Erro ao cadastrar usuário:', error);
         });
 });
-
+  
 function verifyPass(){
+
+    info.style.display = 'block';
+
     let senha = senhaInput.value;
     let feeds = Array.from(document.getElementsByClassName("feed"));
 
     let maiuscula = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
     let numeros = "0123456789";
-    let especiais = "@$%&!"; 
+    let especiais = "@#$%&!"; 
 
     let m = [];
     let n = [];
@@ -116,5 +121,6 @@ function verifyPass(){
 
        // Verificar o estado das verificações e habilitar/desabilitar o botão de cadastro
     const allGreen = feeds.every((feed) => feed.style.color === 'rgb(47, 220, 47)');
+    console.log(allGreen)
     cadastrarButton.disabled = !allGreen;
 }
