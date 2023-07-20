@@ -12,9 +12,10 @@
     margin-bottom: 30px;
   }
 
-  .height__main {
+
+  /* .height__main {
     height: 80vh;
-  }
+  } */
   
   .profile-icon {
     width: 80px;
@@ -45,9 +46,9 @@
   }
   
   .books-section {
-    width: 100%;
+    width: 70%;
   }
-  
+
   .section-heading {
     margin: 0;
     font-size: 24px;
@@ -66,17 +67,18 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
   }
   
   .book-item img {
-    width: 100%;
+    width: 20vh;
     height: auto;
     margin-bottom: 10px;
   }
   
   .book-item h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 5px;
     color: #000000;
   }
@@ -87,3 +89,48 @@
     color: #888888; 
   }
   
+
+/* css minhas perguntas */
+
+.container_mp {
+  flex: 1;
+  margin-bottom: 20px;
+  padding: 0.5rem;
+}
+
+.pergunta {
+  background-color: #ecf6fc;
+  border: none;
+  border-top: 1px solid #0e0c0c65;
+  padding: 10px;
+}
+
+.pergunta h3 {
+  color: #000000;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  
+}
+
+.pergunta p {
+  color: #000000;
+}
+
+.pergunta i {
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+}
+
+.pergunta i:hover {
+  background-color: #00000044;
+}
+
+.content-container {
+  flex: 1;
+}
+
+.center_profile {
+  justify-content: center;
+}

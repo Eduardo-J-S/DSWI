@@ -22,8 +22,10 @@ form.addEventListener('submit', (event) => {
     fetch('../api/db.json')
     .then(e=>e.json())
     .then(e=>{
+        let cont = 0;
         e.cadastro.map((item)=>{
             if(item.email === email && item.senha === senha){
+                cont++;
                 const primeiraLetra = item.nome.charAt(0);
                 localStorage.setItem('loggedIn', 'true');
                 localStorage.setItem('letraNome', primeiraLetra)
@@ -32,7 +34,9 @@ form.addEventListener('submit', (event) => {
             }
         })
         
-        return error.appendChild(erroContent)
-
+        if(cont === 0){
+            return error.appendChild(erroContent)
+        }
+    
     })
 });

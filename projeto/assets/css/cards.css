@@ -6,7 +6,7 @@
     gap: 100px;
     position: relative;
     height: min-content;
-    max-width: 90%;
+    max-width: 78%;
     margin: 0 auto;
     padding: 4em;
 }
@@ -32,10 +32,21 @@
     transition: .25s;
 }
 
+.cards:hover :not(:hover){
+    opacity: 0.9;
+}
+
+.card img:hover{
+    scale: 1.1;
+}
+
+
 .card:hover{
     box-shadow: 0px 0px 0px 10px #fafafa85, 0px 0px 0px 1px #3fabe9aa;
     z-index: 1;
     transition: 0.2s;
+    padding: 10px;
+    padding-top: 15px;
 }
 
 .card:hover .card-image{
@@ -67,5 +78,17 @@
 @media screen and (max-width: 916px) {
     .cards{
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (width: 280px) and (height: 653px) {
+    #cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        position: relative;
+        gap: 150px 90px; 
+        left: 25px;
+        margin: 0;
+        padding: 0;
     }
 }

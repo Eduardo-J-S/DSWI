@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,11 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/forum.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Fórum</title>
 </head>
+
 <body>
     <header class="header" id="header">
         <button onclick="toggleSidebar()" class="btn_icon_header">
@@ -50,13 +52,14 @@
                 <div id="userModal" class="user-modal">
                     <div class="modal-content-perfil">
                         <div class="pr_user">
-                            <a href="minhasPerguntas.html"><button id="perfilUser" class="perfilUser">Minhas Perguntas</button></a>
+                            <a href="minhasPerguntas.html"><button id="perfilUser" class="perfilUser">Minhas
+                                    Perguntas</button></a>
                         </div>
                         <div class="pr_user">
                             <a href="user.html"> <button id="perfilUser" class="perfilUser">Meus Livros</button></a>
                         </div>
                         <div class="sairUser">
-                            <button id="userSair" class="perfilUser" >Sair</button>
+                            <button id="userSair" class="perfilUser">Sair</button>
                         </div>
                     </div>
                 </div>
@@ -65,29 +68,34 @@
     </header>
     <main class="container">
         <div class="header_forum">
-          <h1 class="header-title">Fórum</h1>
+            <h1 class="header-title">Fórum</h1>
         </div>
-    
+
         <div class="content-container">
-          <div>
-            <button onclick="toggleModal()" class="button">Fazer uma pergunta</button>
-          </div>
-    
-          <div id="questionsContainer"></div>
-    
+            <div class="content-button">
+                <button onclick="toggleModal()" class="button">Fazer uma pergunta</button>
+            </div>
+            <div id="questionsContainer"></div>
         </div>
-      </div>
-    
-      <div id="modalContainer" class="modal-container">
-        <div class="modal-content">
-          <h2 class="modal-title">Nova Pergunta</h2>
-          <input type="text" id="inputTitulo" class="input" placeholder="Título" />
-          <textarea id="inputPergunta" class="input input-multiline" placeholder="Corpo da pergunta"></textarea>
-          <div class="modal-buttons-container">
-            <button onclick="enviarPergunta()" class="modal-button">Enviar</button>
-            <button onclick="fecharModal()" class="modal-button modal-button-cancel">Cancelar</button>
-          </div>
+
+        <div class="modal-reportar" id="modal-reportar"></div>
+
+        <div id="modalRespostas" class="modal">
+            <div class="modal-content-answer"></div>
         </div>
+
+
+        <div id="modalContainer" class="modal-container">
+            <div class="modal-content">
+                <h2 class="modal-title">Nova Pergunta</h2>
+                <input type="text" id="inputTitulo" class="input" placeholder="Título" />
+                <textarea id="inputPergunta" class="input input-multiline" placeholder="Corpo da pergunta"></textarea>
+                <div class="modal-buttons-container">
+                    <button onclick="enviarPergunta()" class="modal-button">Enviar</button>
+                    <button onclick="fecharModal()" class="modal-button modal-button-cancel">Cancelar</button>
+                </div>
+            </div>
     </main>
 </body>
+
 </html>

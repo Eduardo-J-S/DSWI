@@ -137,6 +137,7 @@ body {
         width: 100%;
     }
 
+
     .content {
         margin-left: -2.5em;
     }
@@ -180,6 +181,44 @@ body {
     text-align: center;
     background-size: 200% 200%;
     animation: gradientAnimation 80s ease infinite;
+}
+
+.hero__home{
+    position: relative;
+    padding-top: 300px;
+    background-image: url(../img/homeImage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.title__home{
+    width: 85%;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 3.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    animation: glitch 3s infinite;
+    background: linear-gradient(135deg, #00ffea, #0081ff);
+}
+
+.pr__home{
+    width: 85%;
+    line-height: 1.5;
+    text-align: center;
+    flex-wrap: wrap;
+    color: #fff;
+    line-height: 1.5;
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); */
+    /* background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)); */
+    margin-left: 3.5rem;
 }
 
 .image_top h3 {
@@ -965,3 +1004,5 @@ fieldset {
         right: 0;
     }
 }
+
+/* <a href="https://br.freepik.com/vetores-gratis/ilustracao-de-poesia-de-design-plano-desenhado-a-mao_23832498.htm#query=livros&position=0&from_view=search&track=sph">Imagem de pikisuperstar</a> no Freepik */

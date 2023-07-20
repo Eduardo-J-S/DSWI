@@ -1,7 +1,8 @@
 .container {
     flex: 1;
     /* background-color: #ecf6fc; */
-    padding: 10px;
+    /* padding: 10px; */
+
 }
 
 .header_forum {
@@ -10,6 +11,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
 }
 
 .header-title {
@@ -20,8 +23,12 @@
 
 .content-container {
     flex: 1;
-    padding: 11px;
+    /* padding: 11px; */
     /* background-color: #ecf6fc; */
+}
+
+.content-button {
+    text-align: center;
 }
 
 .button {
@@ -35,12 +42,42 @@
     background-color: #2a5481;
 }
 
-.text-no-questions {
-    font-size: 20px;
-    margin: 10px;
-    color: #121212;
-    text-align: center;
+.pergunta {
+    background-color: #ecf6fc;
+    border: none;
+    border-top: 1px solid #0e0c0c65;
+    padding: 10px;
 }
+
+.title-forum {
+    font-size: 26px;
+    color: #000000;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.question-forum {
+    color: #000000;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.pergunta i {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+}
+
+.icon-comment {
+    color: #000000;
+    margin-top: 5px;
+}
+
+
+
+/* css modal criar pergunta */
 
 .modal-container {
     position: fixed;
@@ -96,11 +133,13 @@
     margin-bottom: 8px;
     width: 60%;
     margin-left: 27px;
+    height: 40px;
 }
 
 .modal-button-cancel {
     background-color: #666666;
     width: 60%;
+    margin-right: 15px;
 }
 
 .no_questions {
@@ -108,3 +147,181 @@
     align-items: center;
     margin-top: 250px;
 }
+
+
+/* css modal responder e ver respostas */
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content-answer {
+    flex: 1;
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 40px 0px;
+    border: 1px solid #888;
+    width: 80%;
+    max-height: 70%;
+    color: black;
+    overflow-y: auto;
+}
+
+.modal-content-answer i {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.modal-send-button {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: end;
+    text-align: end;
+    justify-content: end;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.resposta {
+    border-bottom: 1px solid #888;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin: 10px;
+}
+
+
+.modal-close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 25px;
+    margin-top: -15px;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+.modal-input {
+    margin-bottom: 20px;
+    margin-top: -25px;
+    padding: 10px;
+    width: 85%;
+    height: 35%;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-left: 12%;
+    margin-right: auto;
+    display: block;
+
+}
+
+.title-modal-answer {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: -15px;
+}
+
+.question-modal-answer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1131px) {
+    .modal-send-button {
+        margin-bottom: 35px;
+    }
+}
+
+
+/* css modal reportar */
+
+
+.modal-reportar {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .report-container {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .title-report {
+    margin-bottom: 20px;
+  }
+  
+  .title-report h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #000000;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  
+  .modal-close {
+    font-size: 20px;
+    color: #020101;
+    cursor: pointer;
+  }
+  
+  .modal-close:hover {
+    color: #555;
+  }
+  
+  

@@ -47,35 +47,46 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('../api/db.json')
         .then(e => e.json())
         .then(e => {
-            let bookList = document.getElementById('my-books');
+            const perguntas = e.perguntas;
+            let questionList = document.getElementById('my-question');
 
             // Função para adicionar um livro à lista
             function addBookToMyList(livro) {
 
-                let bookItem = document.createElement('div');
-                bookItem.classList.add('book-item');
+                let divPergunta = document.createElement('div');
+                divPergunta.classList.add('pergunta');
 
-                let bookTitle = document.createElement('h3');
-                bookTitle.textContent = livro.title;
-                bookItem.appendChild(bookTitle);
+                let titulo = document.createElement('h3');
+                titulo.textContent = livro.title;
+                divPergunta.appendChild(titulo);
 
-                let bookAuthor = document.createElement('p');
-                bookAuthor.textContent = livro.question;
-                bookItem.appendChild(bookAuthor);
+                let descricao = document.createElement('p');
+                descricao.textContent = livro.question;
+                divPergunta.appendChild(descricao);
 
-                bookList.appendChild(bookItem);
+                const iconComment = document.createElement('i');
+                iconComment.classList.add('fas', 'fa-comment');
+                descricao.appendChild(iconComment);
+
+                const iconEdit = document.createElement('i');
+                iconEdit.classList.add('fas', 'fa-edit');
+                descricao.appendChild(iconEdit);
+
+                // Adicionar ícone de deletar
+                const iconDelete = document.createElement('i');
+                iconDelete.classList.add('fas', 'fa-trash');
+                descricao.appendChild(iconDelete);
+
+                questionList.appendChild(divPergunta);
             }
 
             const user = JSON.parse(localStorage.getItem('user'));
 
-            e.perguntas.map((livro) => {
-                user.minhasPerguntas.forEach(element => {
-                    if (livro.id === element) {
-                        addBookToMyList(livro);
-                    }
-                });
-
-            })
+            e.perguntas.forEach(livro => {
+                if (user.minhasPerguntas.includes(livro.id)) {
+                  addBookToMyList(livro);
+                }
+            });
         })
     }
 
