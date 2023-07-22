@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('../api/db.json')
             .then(e => e.json())
             .then(e => {
+                const user = JSON.parse(localStorage.getItem('user'));
+                const myBooksIds = user.meusLivros || [];
+
                 let bookList = document.getElementById('my-books');
 
                 // Função para adicionar um livro à lista
@@ -32,16 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     bookList.appendChild(bookItem);
                 }
 
-                const user = JSON.parse(localStorage.getItem('user'));
-
-                e.livros.map((livro) => {
-                    user.meusLivros.forEach(element => {
-                        if (livro.id === element) {
-                            addBookToMyList(livro);
-                        }
-                    });
-
-                })
+                e.livros.forEach(livro => {
+                    if (myBooksIds.includes(livro.id)) {
+                        addBookToMyList(livro);
+                    }
+                });
             })
     } else if (window.location.pathname === '/pages/minhasPerguntas.html') {
         fetch('../api/db.json')
@@ -51,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let questionList = document.getElementById('my-question');
 
             // Função para adicionar um livro à lista
-            function addBookToMyList(livro) {
+            function addQuestionsProfile(livro) {
 
                 let divPergunta = document.createElement('div');
                 divPergunta.classList.add('pergunta');
@@ -84,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             e.perguntas.forEach(livro => {
                 if (user.minhasPerguntas.includes(livro.id)) {
-                  addBookToMyList(livro);
+                    addQuestionsProfile(livro);
                 }
             });
         })
