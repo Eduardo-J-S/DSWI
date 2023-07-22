@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 let bookList = document.getElementById('my-books');
 
+                console.log('livros antes do metodo')
                 // Função para adicionar um livro à lista
                 function addBookToMyList(livro) {
-
+                    console.log('livros dentro do metodo')
                     let bookItem = document.createElement('div');
                     bookItem.classList.add('book-item');
 
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 e.livros.forEach(livro => {
                     if (myBooksIds.includes(livro.id)) {
+                        console.log('livros q estão no array de meusLivros')
                         addBookToMyList(livro);
                     }
                 });
