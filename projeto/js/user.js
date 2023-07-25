@@ -47,10 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('../api/db.json')
         .then(e => e.json())
         .then(e => {
-            const perguntas = e.perguntas;
             let questionList = document.getElementById('my-question');
 
-            // Função para adicionar um livro à lista
             function addQuestionsProfile(livro) {
 
                 let divPergunta = document.createElement('div');
@@ -96,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function () {
         let profileIcon = document.getElementById('profile-icon');
         profileIcon.textContent = letraNome;
 
-        // Preenche os detalhes do perfil
         let profileName = document.getElementById('profile-name');
         profileName.textContent = user.nome;
 
