@@ -336,10 +336,6 @@ body {
     height: 125vh;
 }
 
-.height_login {
-    height: 100vh;
-}
-
 .form-cadastro {
     flex: 1.2;
     padding: 20px;
@@ -361,13 +357,6 @@ body {
     margin-bottom: 10px;
 }
 
-.title__login {
-    text-align: center;
-    margin-top: 10px;
-    color: var(--color-deepNavyBlue);
-    margin-bottom: 30px;
-}
-
 fieldset {
     border: none;
     padding: 0;
@@ -376,10 +365,6 @@ fieldset {
 
 .container-cadastro {
     display: flex;
-}
-
-.social__media__login {
-    margin-bottom: 30px;
 }
 
 .list-social-media {
@@ -462,7 +447,6 @@ fieldset {
     display: none;
 }
 
-
 .registrar {
     text-align: center;
 }
@@ -522,18 +506,6 @@ fieldset {
 
 }
 
-.img_logo_login {
-    height: 10vh;
-    margin-top: 10px;
-    transition: transform 0.3s ease-in-out;
-    margin-bottom: 25px;
-}
-
-.img_logo_login:hover {
-    transform: scale(1.1);
-}
-
-
 .erroSenha {
     color: var(--color-error);
     margin-bottom: 8px;
@@ -547,20 +519,11 @@ fieldset {
     .form-cadastro {
         height: 125vh;
     }
-
-    .height_login {
-        height: 95vh;
-    }
-
 }
 
 @media screen and (width: 414px) and (height: 896px) {
     .form-cadastro {
         height: 100vh;
-    }
-
-    .height_login {
-        height: 80vh;
     }
 
 }
@@ -569,20 +532,11 @@ fieldset {
     .form-cadastro {
         height: 105vh;
     }
-
-    .height_login {
-        height: 80vh;
-    }
-
 }
 
 @media screen and (width: 393px) and (height: 851px) {
     .form-cadastro {
         height: 105vh;
-    }
-
-    .height_login {
-        height: 80vh;
     }
 }
 
@@ -590,18 +544,10 @@ fieldset {
     .form-cadastro {
         height: 105vh;
     }
-
-    .height_login {
-        height: 80vh;
-    }
 }
 
 @media screen and (width: 820px) and (height: 1180px) {
     .form-cadastro {
-        height: 80vh;
-    }
-
-    .height_login {
         height: 80vh;
     }
 }
@@ -610,19 +556,11 @@ fieldset {
     .form-cadastro {
         height: 95vh;
     }
-
-    .height_login {
-        height: 75vh;
-    }
 }
 
 @media screen and (width: 912px) and (height: 1368px) {
     .form-cadastro {
         height: 80vh;
-    }
-
-    .height_login {
-        height: 83vh;
     }
 }
 
@@ -636,19 +574,11 @@ fieldset {
         justify-content: center;
         align-items: center;
     }
-
-    .height_login {
-        height: 95vh;
-    }
 }
 
 @media screen and (width: 412px) and (height: 914px) {
     .form-cadastro {
         height: 100vh;
-    }
-
-    .height_login {
-        height: 80vh;
     }
 }
 
@@ -656,14 +586,6 @@ fieldset {
     .form-cadastro {
         height: 140vh;
     }
-
-    .height_login {
-        height: 100vh;
-    }
-}
-
-.padding {
-    padding: 10px;
 }
 
 /* icone usuario logado */

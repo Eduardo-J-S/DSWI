@@ -1,15 +1,16 @@
-const form = document.getElementById('cadastro-form');
+const form = document.getElementById('cadastro-form-login');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const userIcon = document.getElementById('userIcon');
+    const error = document.getElementById('error-login')
 
     let erroContent = document.createElement("div");
-
-    estrutura = `<p class="erroSenha">Usuário ou senha incorretos.</p>`
+    estrutura = `<p class="erroSenha-login">Usuário ou senha incorretos.</p>`
 
     erroContent.innerHTML = estrutura
+    
 
     if (userIcon) {
         console.log('Entrou')
@@ -18,11 +19,11 @@ form.addEventListener('submit', (event) => {
 
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
-
+    let cont = 0;
     fetch('../api/db.json')
     .then(e=>e.json())
     .then(e=>{
-        let cont = 0;
+       
         e.cadastro.map((item)=>{
             if(item.email === email && item.senha === senha){
                 cont++;
@@ -33,9 +34,10 @@ form.addEventListener('submit', (event) => {
                 return window.location.href = 'home.html';
             }
         })
-        
+
         if(cont === 0){
-            return error.appendChild(erroContent)
+            cont++;
+            alert('Usuário ou senha incorretos.')
         }
     
     })

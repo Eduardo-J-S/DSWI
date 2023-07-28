@@ -7,47 +7,48 @@
     <title>Login</title>
     <script src="../js/login.js" defer></script>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body id="container-body-cadastro">
-    <main class="container-cadastro">
-        <div class="img-cadastro">
+<body id="container-body-login">
+    <main class="container-login">
+        <div class="img-login">
             <img src="../assets/login.svg" alt="Imagem da tela de login" title="Login">
         </div>
-        <div class="form-cadastro height_login">
-            <nav class="navegar-home">
+        <div class="form-login height_login">
+            <nav class="navegar-home-login">
                 <a href="home.html"><img src="../assets/img/programming.png" alt="Logo GN" class="img_logo_login"></a>
             </nav>
-            <form action="#" method="post" id="cadastro-form">
+            <form action="#" method="post" id="cadastro-form-login">
                 <div class="title__login">
                     <h1>Fazer Login</h1>
                 </div>
                 <div class="social__media__login">
-                    <ul class="list-social-media">
-                        <li class="item-social-media">
+                    <ul class="list-social-media-login">
+                        <li class="item-social-media-login">
                             <a href="#"><i class="fa-brands fa-facebook"></i></a>
                         </li>
-                        <li class="item-social-media">
+                        <li class="item-social-media-login">
                             <a href="#"><i class="fa-brands fa-google-plus"></i></a>
                         </li>
-                        <li class="item-social-media">
+                        <li class="item-social-media-login">
                             <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                         </li>
                     </ul>
                 </div>
 
-                <ul class="inputs">
-                    <li class="input-caixa">
+                <ul class="inputs-login">
+                    <li class="input-caixa-login">
                         <label for="email">E-mail</label>
                         <fieldset>
                             <input type="email" id="email" name="email" placeholder="Digite seu email" required>
                         </fieldset>
                     </li>
-                    <li class="input-caixa">
+                    <li class="input-caixa-login">
                         <label for="senha">Senha</label>
                         <fieldset>
                             <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
@@ -55,13 +56,13 @@
                     </li>
                 </ul>
 
-                <div id="error" class="error"></div>
+                <div id="error-login" class="error-login"></div>
 
-                <div class="registrar padding">
+                <div class="registrar-login padding">
                     <button type="submit">Login</button>
                 </div>
 
-                <nav class="login-button padding">
+                <nav class="register-button padding">
                     <p>Não tem uma conta? </p>
                     <button><a href="register.html">Assinar</a></button>
                 </nav>
