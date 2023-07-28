@@ -1,11 +1,11 @@
-.content {
+.content__user {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
   
-  .profile-section {
+  .content__user .profile-section {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -17,56 +17,56 @@
     height: 80vh;
   } */
   
-  .profile-icon {
+  .content__user .profile-icon {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #f44336; 
+    background-color: var(--color-info); 
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 36px;
-    color: #000000;
+    color: var(--color-black);
   }
   
-  .profile-details {
+  .content__user .profile-details {
     display: flex;
     flex-direction: column;
   }
   
-  .profile-name {
+  .content__user .profile-name {
     margin: 0;
     font-size: 24px;
   }
   
-  .profile-email {
+  .content__user .profile-email {
     margin: 0;
     font-size: 16px;
-    color: #888888; 
+    color: var(--color-textGrey); 
   }
   
-  .books-section {
+  .content__user .books-section {
     width: 70%;
   }
 
-  .section-heading {
+  .content__user .books-section .section-heading {
     margin: 0;
     font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
   }
   
-  .book-list {
+  .content__user .books-section .book-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
   }
   
   .book-item {
-    background-color: #f5f5f5;
+    background-color: var(--color-white-background);
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var( --color-rgb-one);
     margin: auto;
   }
   
@@ -80,13 +80,13 @@
     margin: 0;
     font-size: 16px;
     margin-bottom: 5px;
-    color: #000000;
+    color: var(--color-black);
   }
   
   .book-item p {
     margin: 0;
     font-size: 14px;
-    color: #888888; 
+    color: var(--color-textGrey); 
   }
   
 
@@ -98,39 +98,89 @@
   padding: 0.5rem;
 }
 
-.pergunta {
-  background-color: #ecf6fc;
+
+
+.container_mp .profile-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+
+/* .height__main {
+  height: 80vh;
+} */
+
+.container_mp .profile-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--color-info); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: var(--color-black);
+}
+
+.container_mp .profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.container_mp .profile-name {
+  margin: 0;
+  font-size: 24px;
+}
+
+.container_mp .profile-email {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-textGrey); 
+}
+
+.container_mp .content-container .section-heading {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.container_mp  .pergunta {
+  background-color: var(--color-white-background-two);
   border: none;
   border-top: 1px solid #0e0c0c65;
   padding: 10px;
 }
 
-.pergunta h3 {
-  color: #000000;
+.container_mp  .pergunta h3 {
+  color: var(--color-black);
   margin-bottom: 10px;
   margin-top: 10px;
   
 }
 
-.pergunta p {
-  color: #000000;
+.container_mp .pergunta p {
+  color: var(--color-black);
 }
 
-.pergunta i {
+.container_mp .pergunta i {
   margin-left: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 50%;
 }
 
-.pergunta i:hover {
+.container_mp  .pergunta i:hover {
   background-color: #00000044;
 }
 
-.content-container {
+.container_mp .content-container {
   flex: 1;
 }
 
-.center_profile {
+.container_mp .center_profile {
   justify-content: center;
 }

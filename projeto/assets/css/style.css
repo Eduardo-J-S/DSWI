@@ -2,6 +2,8 @@
 
 :root {
     --color-white: #f7f7f7;
+    --color-white-background: #f5f5f5;
+    --color-white-background-two: #ecf6fc;
 
     --color-dark1: rgb(39, 39, 39);
     --color-dark2: #2d2d2d;
@@ -10,6 +12,8 @@
     --color-dark5: #343434;
     --color-black: #000000;
     --color-purple: #b040ff;
+
+    --color-textGrey: #888888;
 
     --color-deepNavyBlue: #001f3f;
     --color-deepNavyBlueCl: #012c57;
@@ -22,6 +26,9 @@
     --color-error: #ff0000;
     --color-grey: #ccc;
     --color-info: #ff382b;
+
+    --color-rgb-one: rgba(0, 0, 0, 0.1);
+    --color-rgb-two: rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -183,7 +190,7 @@ body {
     animation: gradientAnimation 80s ease infinite;
 }
 
-.hero__home{
+.hero__home {
     position: relative;
     padding-top: 300px;
     background-image: url(../img/homeImage.jpg);
@@ -191,15 +198,15 @@ body {
     background-position: center;
 }
 
-.title__home{
+.title__home {
     width: 85%;
     margin-top: 20px;
     text-align: center;
     margin-left: 3.5rem;
     flex-wrap: wrap;
     margin-bottom: 10px;
-    color: #000000;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--color-black);
+    text-shadow: 2px 2px 4px ;
     margin-bottom: 10px;
     font-weight: bold;
     text-transform: uppercase;
@@ -209,7 +216,7 @@ body {
     background: linear-gradient(135deg, #00ffea, #0081ff);
 }
 
-.pr__home{
+.pr__home {
     width: 85%;
     line-height: 1.5;
     text-align: center;
@@ -226,8 +233,8 @@ body {
     margin-left: 2rem;
     flex-wrap: wrap;
     margin-bottom: 10px;
-    color: #000000;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--color-black);
+    text-shadow: 2px 2px 4px var(--color-rgb-two);
     margin-bottom: 10px;
     font-weight: bold;
     text-transform: uppercase;
@@ -243,8 +250,8 @@ body {
     flex-wrap: wrap;
     color: #fff;
     line-height: 1.5;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+    text-shadow: 1px 1px 2px var(--color-rgb-two);
+    background: linear-gradient(135deg, var(--color-rgb-one), var(--color-rgb-two));
     margin-left: 2rem;
 }
 
@@ -299,7 +306,7 @@ body {
 /* css cadastro */
 
 .campo-vazio {
-    border: 1px solid red;
+    border: 1px solid var(--color-error);
 }
 
 #container-body-cadastro {
@@ -344,7 +351,7 @@ body {
     padding: 20px;
     background-color: var(--color-white);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
+
 }
 
 .title {
@@ -524,7 +531,7 @@ fieldset {
 
 .img_logo_login:hover {
     transform: scale(1.1);
-  }
+}
 
 
 .erroSenha {
@@ -551,6 +558,7 @@ fieldset {
     .form-cadastro {
         height: 100vh;
     }
+
     .height_login {
         height: 80vh;
     }
@@ -561,6 +569,7 @@ fieldset {
     .form-cadastro {
         height: 105vh;
     }
+
     .height_login {
         height: 80vh;
     }
@@ -571,6 +580,7 @@ fieldset {
     .form-cadastro {
         height: 105vh;
     }
+
     .height_login {
         height: 80vh;
     }
@@ -580,6 +590,7 @@ fieldset {
     .form-cadastro {
         height: 105vh;
     }
+
     .height_login {
         height: 80vh;
     }
@@ -589,6 +600,7 @@ fieldset {
     .form-cadastro {
         height: 80vh;
     }
+
     .height_login {
         height: 80vh;
     }
@@ -598,6 +610,7 @@ fieldset {
     .form-cadastro {
         height: 95vh;
     }
+
     .height_login {
         height: 75vh;
     }
@@ -607,6 +620,7 @@ fieldset {
     .form-cadastro {
         height: 80vh;
     }
+
     .height_login {
         height: 83vh;
     }
@@ -632,6 +646,7 @@ fieldset {
     .form-cadastro {
         height: 100vh;
     }
+
     .height_login {
         height: 80vh;
     }
@@ -641,6 +656,7 @@ fieldset {
     .form-cadastro {
         height: 140vh;
     }
+
     .height_login {
         height: 100vh;
     }
@@ -728,14 +744,14 @@ fieldset {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-bottom: 10px;
-  }
+}
 
-  
-  .perfilUser:hover {
+
+.perfilUser:hover {
     background-color: #ff5500;
-  }
-  
-  /* .sairUser {
+}
+
+/* .sairUser {
     background-color: #ff6600;
     color: #fff;
     border: none;
@@ -750,7 +766,7 @@ fieldset {
   .sairUser:hover {
     color: #ff6600;
   } */
-  
+
 
 
 /* css contato */
@@ -988,11 +1004,12 @@ fieldset {
     .container__body {
         padding: 50px 14px;
     }
-    
+
     .hero__container {
         right: 0;
         left: 0;
     }
+
     .hero__title {
         font-size: 4.5rem;
     }
