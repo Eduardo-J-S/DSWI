@@ -689,6 +689,135 @@ fieldset {
     color: #ff6600;
   } */
 
+  
+@media screen and (max-width: 768px) {
+    .user-modal {
+        margin-right: 305px;
+        margin-top: 5rem; 
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .user-modal {
+        margin-right: 10px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .user-modal {
+        margin-right: 85px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .user-modal {
+        margin-right: 65px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 416px) {
+    .user-modal {
+        margin-right: 65px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .user-modal {
+        margin-right: 10px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 624px) {
+    .user-modal {
+        margin-right: 250px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 588px) {
+    .user-modal {
+        margin-right: 220px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 562px) {
+    .user-modal {
+        margin-right: 200px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .user-modal {
+        margin-right: 180px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 506px) {
+    .user-modal {
+        margin-right: 155px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .user-modal {
+        margin-right: 130px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 452px) {
+    .user-modal {
+        margin-right: 110px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .user-modal {
+        margin-right: 90px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .user-modal {
+        margin-right: 65px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 368px) {
+    .user-modal {
+        margin-right: 40px;
+        margin-top: 5rem; 
+        width: 240px;
+    }
+}
+
+
 
 
 /* css contato */
