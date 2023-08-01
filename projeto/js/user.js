@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 });
             })
-    } else if (window.location.pathname === '/pages/minhasPerguntas.html') {
+    } else if (window.location.pathname === '../pages/minhasPerguntas.html') {
         fetch('../api/db.json')
         .then(e => e.json())
         .then(e => {

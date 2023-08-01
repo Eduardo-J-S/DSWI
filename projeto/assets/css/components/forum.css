@@ -1,11 +1,10 @@
-.container {
+.container_forum {
     flex: 1;
     /* background-color: #ecf6fc; */
     /* padding: 10px; */
-
 }
 
-.header_forum {
+.container_forum .header_forum {
     background-color: #007bff;
     padding: 10px;
     display: flex;
@@ -15,41 +14,41 @@
     justify-content: center;
 }
 
-.header-title {
+.container_forum .header-title {
     color: #f2f2f2;
     font-size: 24px;
     font-weight: bold;
 }
 
-.content-container {
+.container_forum .content-container {
     flex: 1;
     /* padding: 11px; */
     /* background-color: #ecf6fc; */
 }
 
-.content-button {
+.container_forum .content-button {
     text-align: center;
 }
 
-.button {
+.container_forum .button {
     margin-bottom: 16px;
     background-color: #007bff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.button:hover {
+.container_forum .button:hover {
     background-color: #2a5481;
 }
 
-.pergunta {
+.container_forum .pergunta {
     background-color: #ecf6fc;
     border: none;
     border-top: 1px solid #0e0c0c65;
     padding: 10px;
 }
 
-.title-forum {
+.container_forum .title-forum {
     font-size: 26px;
     color: #000000;
     margin-bottom: 10px;
@@ -57,20 +56,20 @@
     margin-left: 10px;
 }
 
-.question-forum {
+.container_forum .question-forum {
     color: #000000;
     font-weight: 100;
     margin-left: 10px;
 }
 
-.pergunta i {
+.container_forum .pergunta i {
     margin-left: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 50%;
 }
 
-.icon-comment {
+.container_forum .icon-comment {
     color: #000000;
     margin-top: 5px;
 }
@@ -79,7 +78,7 @@
 
 /* css modal criar pergunta */
 
-.modal-container {
+.container_forum .modal-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -92,7 +91,7 @@
     z-index: 999;
 }
 
-.modal-content {
+.container_forum .modal-content {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 10px;
@@ -101,14 +100,14 @@
     text-align: center;
 }
 
-.modal-title {
+.container_forum .modal-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 16px;
     color: #666666;
 }
 
-.input {
+.container_forum .input {
     background-color: #f2f2f2;
     width: 100%;
     padding: 12px;
@@ -118,17 +117,17 @@
     color: #000;
 }
 
-.input-multiline {
+.container_forum .input-multiline {
     height: 150px;
 }
 
-.modal-buttons-container {
+.container_forum .modal-buttons-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.modal-button {
+.container_forum .modal-button {
     background-color: #007bff;
     margin-bottom: 8px;
     width: 60%;
@@ -136,13 +135,13 @@
     height: 40px;
 }
 
-.modal-button-cancel {
+.container_forum .modal-button-cancel {
     background-color: #666666;
     width: 60%;
     margin-right: 15px;
 }
 
-.no_questions {
+.container_forum .no_questions {
     justify-content: center;
     align-items: center;
     margin-top: 250px;
@@ -152,7 +151,7 @@
 /* css modal responder e ver respostas */
 
 
-.modal {
+.container_forum .modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -164,7 +163,7 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content-answer {
+.container_forum .modal-content-answer {
     flex: 1;
     background-color: #fefefe;
     margin: 10% auto;
@@ -176,12 +175,12 @@
     overflow-y: auto;
 }
 
-.modal-content-answer i {
+.container_forum .modal-content-answer i {
     margin-left: 10px;
     cursor: pointer;
 }
 
-.modal-send-button {
+.container_forum .modal-send-button {
     color: black;
     font-size: 28px;
     font-weight: bold;
@@ -193,7 +192,7 @@
     cursor: pointer;
 }
 
-.resposta {
+.container_forum .resposta {
     border-bottom: 1px solid #888;
     padding-bottom: 10px;
     margin-top: 10px;
@@ -201,7 +200,7 @@
 }
 
 
-.modal-close {
+.container_forum .modal-close {
     color: black;
     float: right;
     font-size: 28px;
@@ -211,11 +210,11 @@
     margin-top: -15px;
 }
 
-.modal-close:hover {
+.container_forum .modal-close:hover {
     color: #000;
 }
 
-.modal-input {
+.container_forum .modal-input {
     margin-bottom: 20px;
     margin-top: -25px;
     padding: 10px;
@@ -229,19 +228,19 @@
 
 }
 
-.title-modal-answer {
+.container_forum .title-modal-answer {
     text-align: center;
     margin-bottom: 10px;
     margin-top: -15px;
 }
 
-.question-modal-answer {
+.container_forum .question-modal-answer {
     text-align: center;
     margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1131px) {
-    .modal-send-button {
+    .container_forum .modal-send-button {
         margin-bottom: 35px;
     }
 }
@@ -250,7 +249,7 @@
 /* css modal reportar */
 
 
-.modal-reportar {
+.container_forum .modal-reportar {
     display: none;
     position: fixed;
     z-index: 1;
@@ -262,7 +261,7 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.report-container {
+.container_forum .report-container {
     background-color: #fefefe;
     margin: 10% auto;
     padding: 20px;
@@ -272,36 +271,36 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.title-report {
+.container_forum .title-report {
     margin-bottom: 20px;
 }
 
-.title-report h3 {
+.container_forum .title-report h3 {
     font-size: 18px;
     font-weight: bold;
     color: #000000;
 }
 
-ul {
+.container_forum ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-li {
+.container_forum li {
     margin-bottom: 10px;
 }
 
-input[type="radio"] {
+.container_forum input[type="radio"] {
     margin-right: 10px;
 }
 
-label {
+.container_forum label {
     font-size: 16px;
     color: #000000;
 }
 
-input[type="submit"] {
+.container_forum input[type="submit"] {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -310,16 +309,16 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.container_forum input[type="submit"]:hover {
     background-color: #0069d9;
 }
 
-.modal-close {
+.container_forum .modal-close {
     font-size: 20px;
     color: #020101;
     cursor: pointer;
 }
 
-.modal-close:hover {
+.container_forum .modal-close:hover {
     color: #555;
 }

@@ -10,79 +10,79 @@ function fetchBooks() {
     const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${apiKey}`;
 
     fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        
-        const items = data.items;
-        const comprar = [];
+        .then(response => response.json())
+        .then(data => {
 
-        let contBooks = 0;
+            const items = data.items;
+            const comprar = [];
 
-        
-        items.forEach(item => {
-            const title = item.volumeInfo.title;
+            let contBooks = 0;
 
-            // Verificar se o título do livro corresponde à consulta
-            if (title === query) {
-                if (item.saleInfo.saleability === 'FOR_SALE') {
 
-                    let obj = {
-                        buyLink: item.saleInfo.buyLink,
-                        listPrice: item.saleInfo.listPrice.amount,
-                        currencyCode: item.saleInfo.listPrice.currencyCode
+            items.forEach(item => {
+                const title = item.volumeInfo.title;
+
+                // Verificar se o título do livro corresponde à consulta
+                if (title === query) {
+                    if (item.saleInfo.saleability === 'FOR_SALE') {
+
+                        let obj = {
+                            buyLink: item.saleInfo.buyLink,
+                            listPrice: item.saleInfo.listPrice.amount,
+                            currencyCode: item.saleInfo.listPrice.currencyCode
+                        }
+
+                        comprar.push(obj)
+
+                        contBooks++;
                     }
-
-                    comprar.push(obj)
-                    
-                    contBooks++;
                 }
-            } 
-        });
+            });
 
-        if (contBooks === 0) {
-            let estruturaResults = `<p class="preco__venda">Nenhum resultado encontrado</p>`;
-          
-            let divResults = document.createElement("div");
-            divResults.innerHTML = estruturaResults;
-            results.appendChild(divResults);
-          } else {
-            comprar.map((call) => {
-              let estruturaResults = `
+            if (contBooks === 0) {
+                let estruturaResults = `<p class="preco__venda">Nenhum resultado encontrado</p>`;
+
+                let divResults = document.createElement("div");
+                divResults.innerHTML = estruturaResults;
+                results.appendChild(divResults);
+            } else {
+                comprar.map((call) => {
+                    let estruturaResults = `
                 <p class="preco__venda">Preço de venda: ${call.listPrice} ${call.currencyCode}</p>
                 <div class="local__venda">
                   <a href="${call.buyLink}" target="_blank">Clique aqui para acessar o site</a>
                 </div>
               `;
-          
-              let divResults = document.createElement("div");
-              divResults.innerHTML = estruturaResults;
-              results.appendChild(divResults);
-            });
-          }
-          
-        
-    })
-    .catch(error => {
-        console.error(error);
-    });
+
+                    let divResults = document.createElement("div");
+                    divResults.innerHTML = estruturaResults;
+                    results.appendChild(divResults);
+                });
+            }
+
+
+        })
+        .catch(error => {
+            console.error(error);
+        });
 }
 
 
 fetch('../api/db.json')
-.then(e=>e.json())
-.then(e=>{
+    .then(e => e.json())
+    .then(e => {
 
-    function showModal(obj) {
-        let modalContent = document.createElement("div");
-        modalContent.classList.add("modal-content");
-      
-        let title = obj.titulo;
-        let img = obj.imgCapa;
-        let data = obj.ano;
-        let overview = obj.descricao;
-        let estoq = obj.estoque;
-      
-        let modalStructure = `
+        function showModal(obj) {
+            let modalContent = document.createElement("div");
+            modalContent.classList.add("modal-content");
+
+            let title = obj.titulo;
+            let img = obj.imgCapa;
+            let data = obj.ano;
+            let overview = obj.descricao;
+            let estoq = obj.estoque;
+
+            let modalStructure = `
           <div class="modal-header">
             <h2 class="data-title">${title}</h2>
             <span class="close">&times;</span>
@@ -104,125 +104,126 @@ fetch('../api/db.json')
           </div>
         `;
 
-        let clickCount = 0;
+            let clickCount = 0;
 
-        const buttonModal = document.getElementById('modal');
-        buttonModal.addEventListener('click', function(event) {
-        if (event.target.matches('#searchButton')) {
-            if (clickCount === 0) {
-                const bookName = document.getElementById('bookName').value;
-          
-                if (bookName) {
-                  updateQuery(bookName);
-                }
-      
-                clickCount++;
-              }
-            }
-        });
-        
-        modalContent.innerHTML = modalStructure;
+            const buttonModal = document.getElementById('modal');
+            buttonModal.addEventListener('click', function (event) {
+                if (event.target.matches('#searchButton')) {
+                    if (clickCount === 0) {
+                        const bookName = document.getElementById('bookName').value;
 
-       
-        let modal = document.getElementById("modal");
-        modal.style.display = "block";
-        modal.innerHTML = ""; 
-        modal.appendChild(modalContent);
-      
-        // Fecha o modal quando o usuário clica no botão de fechar
-        let closeButton = modalContent.querySelector(".close");
-        closeButton.addEventListener("click", () => {
-            modal.style.display = "none";
-            modal.innerHTML = ""; 
-        });
+                        if (bookName) {
+                            updateQuery(bookName);
+                        }
 
-
-
-        
-
-
-        const user = JSON.parse(localStorage.getItem('user')); 
-        let loggedIn = localStorage.getItem('loggedIn');
-
-        if (loggedIn === 'true') {
-            let plusButtons = modalContent.querySelectorAll(".data-title");
-            plusButtons.forEach((button) => {
-                let plusButton = document.createElement("button");
-                plusButton.innerHTML = "+";
-                plusButton.classList.add("add-button");
-                button.appendChild(plusButton);
-
-                const idLivro = obj.id
-                
-                if (user.meusLivros.includes(idLivro)) {
-                    plusButton.innerHTML = "-";
-                }
-                
-                plusButton.addEventListener("click", () => {
-                    
-                    const currentPerguntas = user.minhasPerguntas;
-
-                    const idLivro = obj.id;
-
-                    const data = {
-                        nome: user.nome,
-                        email: user.email,
-                        telefone: user.telefone,
-                        senha: user.senha,
-                        meusLivros: [],
-                        minhasPerguntas: user.minhasPerguntas,
-                        id: user.id
+                        clickCount++;
                     }
+                }
+            });
+
+            modalContent.innerHTML = modalStructure;
+
+
+            let modal = document.getElementById("modal");
+            modal.style.display = "block";
+            modal.innerHTML = "";
+            modal.appendChild(modalContent);
+
+            // Fecha o modal quando o usuário clica no botão de fechar
+            let closeButton = modalContent.querySelector(".close");
+            closeButton.addEventListener("click", () => {
+                modal.style.display = "none";
+                modal.innerHTML = "";
+            });
+
+
+
+
+
+
+            const user = JSON.parse(localStorage.getItem('user'));
+            let loggedIn = localStorage.getItem('loggedIn');
+
+            if (loggedIn === 'true') {
+                let plusButtons = modalContent.querySelectorAll(".data-title");
+                plusButtons.forEach((button) => {
+                    let plusButton = document.createElement("button");
+                    plusButton.innerHTML = "+";
+                    plusButton.classList.add("add-button");
+                    button.appendChild(plusButton);
+
+                    const idLivro = obj.id
 
                     if (user.meusLivros.includes(idLivro)) {
-                        data.meusLivros = user.meusLivros.filter((livroId) => livroId !== idLivro);
-                    } else {
-                        data.meusLivros = [...user.meusLivros, idLivro];
+                        plusButton.innerHTML = "-";
                     }
 
-                    fetch(`http://localhost:3000/cadastro/${user.id}`, {
-                        method: 'PUT',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(data),
-                    })
-                    .then(response => {
-                        if (response.ok) {
-                            console.log('Livro adicionado com sucesso');
-                            fetch('../api/db.json')
-                            .then(e=>e.json())
-                            .then(e=>{
-                                e.cadastro.map((item)=>{
-                                    if(item.email === user.email && item.senha === user.senha){
-                                        localStorage.setItem('user', JSON.stringify(item));
-                                    }
-                                })
+                    plusButton.addEventListener("click", () => {
 
-                            })
-                        } else {
-                            console.error('Erro ao adicionar o livro');
+                        const currentPerguntas = user.minhasPerguntas;
+
+                        const idLivro = obj.id;
+
+                        const data = {
+                            nome: user.nome,
+                            email: user.email,
+                            telefone: user.telefone,
+                            senha: user.senha,
+                            meusLivros: [],
+                            minhasPerguntas: user.minhasPerguntas,
+                            id: user.id
                         }
-                    })
-                    .catch(error => {
-                        console.error('Erro na requisição:', error);
+
+                        if (user.meusLivros.includes(idLivro)) {
+                            data.meusLivros = user.meusLivros.filter((livroId) => livroId !== idLivro);
+                        } else {
+                            data.meusLivros = [...user.meusLivros, idLivro];
+                        }
+
+                        fetch(`http://localhost:3000/cadastro/${user.id}`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(data),
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    console.log('Livro adicionado com sucesso');
+                                    fetch('../api/db.json')
+                                        .then(e => e.json())
+                                        .then(e => {
+                                            e.cadastro.map((item) => {
+                                                if (item.email === user.email && item.senha === user.senha) {
+                                                    localStorage.setItem('user', JSON.stringify(item));
+                                                }
+                                            })
+
+                                        })
+                                } else {
+                                    console.error('Erro ao adicionar o livro');
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Erro na requisição:', error);
+                            });
                     });
                 });
-            });
+            }
+
+
         }
 
+        function add_card(obj) {
 
-    }
-      
-    function add_card(obj){
-        
-        let div = document.createElement("div")
-        let title = obj.titulo
-        let img = obj.imgCapa
-        let data = obj.ano
-        let estoq = obj.estoque
+            let div = document.createElement("div")
+            div.classList.add('book-card');
+            let title = obj.titulo
+            let img = obj.imgCapa
+            let data = obj.ano
+            let estoq = obj.estoque
 
-        let estrutura = `<section class="card">
+            let estrutura = `<section class="card">
             <div class="card_image" id="card-image">
                 <img src="${img}" alt="">
             </div>
@@ -235,15 +236,28 @@ fetch('../api/db.json')
         </section>
         `
 
-        div.innerHTML = estrutura
+            div.innerHTML = estrutura
 
 
-         div.addEventListener("click", ()=>{
-            showModal(obj)
-        })
+            div.addEventListener("click", () => {
+                showModal(obj)
+            })
 
-        cards.appendChild(div)
+            cards.appendChild(div)
+        }
+
+        e.livros.map(add_card)
+    })
+
+
+function searchBooks() {
+    const searchTerm = document.getElementById('searchInput').value;
+
+    if (searchTerm.trim() === '') {
+        alert('Por favor, digite o nome do livro para realizar a busca.');
+        return;
     }
 
-    e.livros.map(add_card)
-})
+}
+
+

@@ -1,13 +1,19 @@
+/* css cadastro */
+
 .campo-vazio {
     border: 1px solid var(--color-error);
 }
 
-#container-body-login {
+#container-body-cadastro {
     height: 100vh;
     width: 100%;
 }
 
-.img-login {
+.container-cadastro {
+    display: flex;
+}
+
+.container-cadastro .img-cadastro {
     flex: 2;
     display: flex;
     align-items: center;
@@ -15,21 +21,21 @@
     position: relative;
 }
 
-.img-login img {
+.container-cadastro .img-cadastro img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.img-login img {
+.container-cadastro .img-cadastro img {
     height: 100%;
     width: auto;
     max-width: 100%;
 }
 
-.height_login {
-    height: 100vh;
+.container-cadastro .height_cadastro {
+    height: 125vh;
 }
 
-.form-login {
+.container-cadastro .form-cadastro {
     flex: 1.2;
     padding: 20px;
     display: flex;
@@ -43,40 +49,32 @@
 
 }
 
-.title__login {
+.container-cadastro .title {
     text-align: center;
     margin-top: 10px;
     color: var(--color-deepNavyBlue);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
-fieldset {
+.container-cadastro fieldset {
     border: none;
     padding: 0;
     margin: 0;
 }
 
-.container-login {
-    display: flex;
-}
-
-.social__media__login {
-    margin-bottom: 30px;
-}
-
-.list-social-media-login {
+.container-cadastro .list-social-media {
     list-style-type: none;
     display: flex;
     justify-content: center;
 }
 
-.list-social-media-login li {
+.container-cadastro .list-social-media li {
     margin-right: 10px;
     font-size: 32px;
     margin-bottom: 10px;
 }
 
-.item-social-media-login a {
+.container-cadastro .item-social-media a {
     color: var(--color-darkGrey);
     text-decoration: none;
     display: inline-block;
@@ -89,16 +87,16 @@ fieldset {
     text-align: center;
 }
 
-.item-social-media-login a:hover {
+.container-cadastro .item-social-media a:hover {
     background-color: var(--color-mossGreen);
 }
 
-.input-caixa-login {
+.container-cadastro .input-caixa {
     list-style-type: none;
     justify-content: center;
 }
 
-.inputs-login {
+.container-cadastro .inputs {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
@@ -106,19 +104,20 @@ fieldset {
     flex-direction: column;
 }
 
-.input-caixa-login {
+.container-cadastro .input-caixa {
     margin-bottom: 20px;
 }
 
-.input-caixa-login label {
+.container-cadastro .input-caixa label {
     display: block;
     font-size: 14px;
     color: var(--color-dark2);
 
 }
 
-.input-caixa-login input[type="email"],
-.input-caixa-login input[type="password"] {
+.container-cadastro .input-caixa input[type="text"],
+.container-cadastro .input-caixa input[type="email"],
+.container-cadastro .input-caixa input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid var(--color-grey);
@@ -128,17 +127,26 @@ fieldset {
     margin-top: 8px;
 }
 
-.input-caixa-login input[type="email"]:focus,
-.input-caixa-login input[type="password"]:focus {
+.container-cadastro .input-caixa input[type="text"]:focus,
+.container-cadastro .input-caixa input[type="email"]:focus,
+.container-cadastro .input-caixa input[type="password"]:focus {
     outline: none;
     border-color: var(--color-dark2);
 }
 
-.registrar-login {
+.container-cadastro .info {
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--color-info);
+    margin-bottom: 10px;
+    display: none;
+}
+
+.container-cadastro .registrar {
     text-align: center;
 }
 
-.registrar-login button {
+.container-cadastro .registrar button {
     background-color: var(--color-blue);
     color: var(--color-white);
     border: none;
@@ -148,185 +156,129 @@ fieldset {
     transition: background-color 0.3s ease;
 }
 
-.registrar-login button:hover {
+.container-cadastro .registrar button:hover {
     background-color: var(--color-deepNavyBlue);
 }
 
-.register-button {
+.container-cadastro .login-button {
     display: flex;
     align-items: center;
     margin-top: 20px;
     justify-content: center;
 }
 
-.register-button p {
+.container-cadastro .login-button p {
     margin-right: 10px;
     color: var(--color-deepNavyBlue);
 }
 
-.register-button button a {
+.container-cadastro .login-button button a {
     text-decoration: none;
     font-weight: 600;
     color: var(--color-blue);
 }
 
-.register-button button {
+.container-cadastro .login-button button {
     border: none;
     cursor: pointer;
 }
 
-.navegar-home-login {
+.container-cadastro .navegar-home {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 0;
 }
 
-.img_logo_register:hover {
-    transform: scale(1.1);
-
-}
-
-.img_logo_login {
+.container-cadastro .img_logo_register {
     height: 10vh;
     margin-top: 10px;
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 25px;
 }
 
-.img_logo_login:hover {
+.container-cadastro .img_logo_register:hover {
     transform: scale(1.1);
+
 }
 
-
-.error-login .erroSenha-login {
+.erroSenha {
     color: var(--color-error);
     margin-bottom: 8px;
 }
 
 @media screen and (max-width: 768px) {
-    .container-login {
+    .container-cadastro {
         display: block;
     }
 
-    .form-login {
-        height: 125vh;
+    .container-cadastro .form-cadastro {
+        height: 120vh;
     }
-
-    .height_login {
-        height: 95vh;
-    }
-
 }
 
 @media screen and (width: 414px) and (height: 896px) {
-    .form-login {
-        height: 100vh;
-    }
-
-    .height_login {
-        height: 80vh;
+    .container-cadastro .form-cadastro {
+        height: 95vh;
     }
 
 }
 
 @media screen and (width: 390px) and (height: 844px) {
-    .form-login {
+    .container-cadastro .form-cadastro {
         height: 105vh;
     }
-
-    .height_login {
-        height: 80vh;
-    }
-
 }
 
 @media screen and (width: 393px) and (height: 851px) {
-    .form-login {
+    .container-cadastro .form-cadastro {
         height: 105vh;
-    }
-
-    .height_login {
-        height: 80vh;
     }
 }
 
 @media screen and (width: 412px) and (height: 915px) {
-    .form-login {
+    .container-cadastro .form-cadastro {
         height: 105vh;
-    }
-
-    .height_login {
-        height: 80vh;
     }
 }
 
 @media screen and (width: 820px) and (height: 1180px) {
-    .form-login {
-        height: 80vh;
-    }
-
-    .height_login {
+    .container-cadastro .form-cadastro {
         height: 80vh;
     }
 }
 
 @media screen and (width: 768px) and (height: 1024px) {
-    .form-login {
+    .container-cadastro .form-cadastro {
         height: 95vh;
-    }
-
-    .height_login {
-        height: 75vh;
     }
 }
 
 @media screen and (width: 912px) and (height: 1368px) {
-    .form-login {
+    .container-cadastro .form-cadastro {
         height: 80vh;
-    }
-
-    .height_login {
-        height: 83vh;
     }
 }
 
 @media screen and (width: 280px) and (height: 653px) {
-    .form-login {
+    .container-cadastro .form-cadastro {
         height: 135vh;
     }
 
-    .erroSenha-login {
+    .erroSenha {
         font-size: 13px;
         justify-content: center;
         align-items: center;
     }
-
-    .height_login {
-        height: 95vh;
-    }
 }
 
 @media screen and (width: 412px) and (height: 914px) {
-    .form-login {
+    .container-cadastro .form-cadastro {
         height: 100vh;
-    }
-
-    .height_login {
-        height: 80vh;
     }
 }
 
 @media screen and (width: 1024px) and (height: 600px) {
-    .form-login {
+    .container-cadastro .form-cadastro {
         height: 140vh;
     }
-
-    .height_login {
-        height: 100vh;
-    }
-}
-
-.padding {
-    padding: 10px;
 }

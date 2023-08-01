@@ -1,0 +1,181 @@
+/* css contato */
+
+#container_contact {
+    background-color: var(--color-white);
+}
+
+.container_contato .col-md {
+    position: relative;
+    min-height: 1px;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+}
+
+.container_contato .text_title {
+    color: var(--color-deepNavyBlue);
+    font-weight: 400;
+    margin-left: 1.875rem;;
+    font-size: 4rem;
+    margin-top: 4.375rem;
+}
+
+.container_contato .pr_title {
+    color: var(--color-deepNavyBlue);
+    font-weight: 500;
+    margin-left: 1.875rem; 
+    margin-top: 4.375rem;
+    font-size: 1.1rem;
+}
+
+.container_contato .contact {
+    width: 100%;
+    max-width: 56.25rem;
+    justify-content: flex-start;
+    margin-left: 1.875rem;
+    padding: 1.25rem;
+}
+
+.container_contato .form-contact {
+    margin-bottom: 1.25rem;
+}
+
+.container_contato .inputs-contact {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container_contato .input-caixa-contact {
+    margin-bottom: 1.25rem;
+}
+
+.container_contato .input-caixa-contact label {
+    color: var(--color-deepNavyBlue);
+    display: block;
+    margin-bottom: 0.625rem;
+    font-weight: bold;
+}
+
+.container_contato .input-caixa-contact input,
+.container_contato .input-caixa-contact textarea,
+.container_contato .input-caixa-contact select {
+    width: 65vw;
+    padding: 0.625rem;
+    border: 1px solid var(--color-grey);
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    border: none;
+}
+
+.container_contato .input-caixa-contact input:focus,
+.container_contato .input-caixa-contact textarea:focus,
+.container_contato .input-caixa-contact select:focus {
+    outline: none;
+}
+
+.container_contato .input-caixa-contact textarea {
+    resize: vertical;
+    min-height: 9.375rem; 
+}
+
+.container_contato .input-caixa-contact p {
+    margin-top:  0.9375rem;
+    margin-bottom:  0.9375rem;
+    font-weight: 500;
+    color: var(--color-deepNavyBlue);
+}
+
+.container_contato .enviar_contact {
+    padding: 0 0 3.125rem;
+}
+
+.container_contato .enviar_contact button {
+    padding: 0.625rem 1.25rem;
+    background-color: var(--color-deepNavyBlue);
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.container_contato .enviar_contact button:hover {
+    background-color: var(--color-deepNavyBlueCl);
+}
+
+@media screen and (max-width: 768px) {
+    .container_contato .text_title {
+        font-size: 2rem; 
+        margin-top: 2.5rem; 
+        margin-left: 0.3125rem; 
+    }
+
+    .container_contato .pr_title {
+        font-size: 1rem;
+        margin-top: 2.5rem;
+        margin-left: 0;
+    }
+
+    .container_contato .contact {
+        margin-left: 0;
+        padding: 0.625rem;
+    }
+
+    .container_contato .input-caixa-contact input,
+    .container_contato .input-caixa-contact textarea,
+    .container_contato .input-caixa-contact select {
+        width: 100%;
+    }
+}
+
+@media screen and (width: 820px) and (height: 1180px) {
+    .container_contato .pr_title {
+        font-size: 1rem;
+        margin-top: 40px;
+        margin-left: 5px;
+        margin-bottom: 15px;
+    }
+
+    .container_contato .text_title {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .container_contato .contact {
+        margin-left: 0;
+        padding: 0.625rem;
+    }
+
+
+    .container_contato .input-caixa-contact input,
+    .container_contato .input-caixa-contact textarea,
+    .container_contato .input-caixa-contact select {
+        width: 85%;
+    }
+}
+
+@media screen and (width: 912px) and (height: 1368px) {
+    .container_contato .pr_title {
+        font-size: 1rem;
+        margin-top: 2.5rem;
+        margin-left: 0.3125rem;
+        margin-bottom: 15px;
+    }
+
+    .container_contato .text_title {
+        margin-top: 2.5rem;
+        margin-left: 0;
+    }
+
+    .container_contato .contact {
+        margin-left: 0;
+        padding: 0.625rem;
+    }
+
+
+    .container_contato .input-caixa-contact input,
+    .container_contato .input-caixa-contact textarea,
+    .container_contato .input-caixa-contact select {
+        width: 85%;
+    }
+}

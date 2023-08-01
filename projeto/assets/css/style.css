@@ -206,7 +206,7 @@ body {
     flex-wrap: wrap;
     margin-bottom: 10px;
     color: var(--color-black);
-    text-shadow: 2px 2px 4px ;
+    text-shadow: 2px 2px 4px;
     margin-bottom: 10px;
     font-weight: bold;
     text-transform: uppercase;
@@ -301,292 +301,6 @@ body {
     }
 }
 
-
-
-/* css cadastro */
-
-.campo-vazio {
-    border: 1px solid var(--color-error);
-}
-
-#container-body-cadastro {
-    height: 100vh;
-    width: 100%;
-}
-
-.img-cadastro {
-    flex: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.img-cadastro img {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.img-cadastro img {
-    height: 100%;
-    width: auto;
-    max-width: 100%;
-}
-
-.height_cadastro {
-    height: 125vh;
-}
-
-.form-cadastro {
-    flex: 1.2;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: var(--color-white);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-}
-
-.title {
-    text-align: center;
-    margin-top: 10px;
-    color: var(--color-deepNavyBlue);
-    margin-bottom: 10px;
-}
-
-fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-.container-cadastro {
-    display: flex;
-}
-
-.list-social-media {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-}
-
-.list-social-media li {
-    margin-right: 10px;
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.item-social-media a {
-    color: var(--color-darkGrey);
-    text-decoration: none;
-    display: inline-block;
-    padding: 5px;
-    border-radius: 50%;
-    transition: background-color 0.3s;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-}
-
-.item-social-media a:hover {
-    background-color: var(--color-mossGreen);
-}
-
-.input-caixa {
-    list-style-type: none;
-    justify-content: center;
-}
-
-.inputs {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.input-caixa {
-    margin-bottom: 20px;
-}
-
-.input-caixa label {
-    display: block;
-    font-size: 14px;
-    color: var(--color-dark2);
-
-}
-
-.input-caixa input[type="text"],
-.input-caixa input[type="email"],
-.input-caixa input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--color-grey);
-    border-radius: 5px;
-    font-size: 14px;
-    color: var(--color-dark3);
-    margin-top: 8px;
-}
-
-.input-caixa input[type="text"]:focus,
-.input-caixa input[type="email"]:focus,
-.input-caixa input[type="password"]:focus {
-    outline: none;
-    border-color: var(--color-dark2);
-}
-
-.info {
-    font-size: 13px;
-    line-height: 16px;
-    color: var(--color-info);
-    margin-bottom: 10px;
-    display: none;
-}
-
-.registrar {
-    text-align: center;
-}
-
-.registrar button {
-    background-color: var(--color-blue);
-    color: var(--color-white);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.registrar button:hover {
-    background-color: var(--color-deepNavyBlue);
-}
-
-.login-button {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    justify-content: center;
-}
-
-.login-button p {
-    margin-right: 10px;
-    color: var(--color-deepNavyBlue);
-}
-
-.login-button button a {
-    text-decoration: none;
-    font-weight: 600;
-    color: var(--color-blue);
-}
-
-.login-button button {
-    border: none;
-    cursor: pointer;
-}
-
-.navegar-home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0;
-}
-
-.img_logo_register {
-    height: 10vh;
-    margin-top: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.img_logo_register:hover {
-    transform: scale(1.1);
-
-}
-
-.erroSenha {
-    color: var(--color-error);
-    margin-bottom: 8px;
-}
-
-@media screen and (max-width: 768px) {
-    .container-cadastro {
-        display: block;
-    }
-
-    .form-cadastro {
-        height: 125vh;
-    }
-}
-
-@media screen and (width: 414px) and (height: 896px) {
-    .form-cadastro {
-        height: 100vh;
-    }
-
-}
-
-@media screen and (width: 390px) and (height: 844px) {
-    .form-cadastro {
-        height: 105vh;
-    }
-}
-
-@media screen and (width: 393px) and (height: 851px) {
-    .form-cadastro {
-        height: 105vh;
-    }
-}
-
-@media screen and (width: 412px) and (height: 915px) {
-    .form-cadastro {
-        height: 105vh;
-    }
-}
-
-@media screen and (width: 820px) and (height: 1180px) {
-    .form-cadastro {
-        height: 80vh;
-    }
-}
-
-@media screen and (width: 768px) and (height: 1024px) {
-    .form-cadastro {
-        height: 95vh;
-    }
-}
-
-@media screen and (width: 912px) and (height: 1368px) {
-    .form-cadastro {
-        height: 80vh;
-    }
-}
-
-@media screen and (width: 280px) and (height: 653px) {
-    .form-cadastro {
-        height: 135vh;
-    }
-
-    .erroSenha {
-        font-size: 13px;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-@media screen and (width: 412px) and (height: 914px) {
-    .form-cadastro {
-        height: 100vh;
-    }
-}
-
-@media screen and (width: 1024px) and (height: 600px) {
-    .form-cadastro {
-        height: 140vh;
-    }
-}
 
 /* icone usuario logado */
 
@@ -689,18 +403,18 @@ fieldset {
     color: #ff6600;
   } */
 
-  
+
 @media screen and (max-width: 768px) {
     .user-modal {
         margin-right: 305px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
     }
 }
 
 @media screen and (max-width: 375px) {
     .user-modal {
         margin-right: 10px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -708,7 +422,7 @@ fieldset {
 @media screen and (max-width: 414px) {
     .user-modal {
         margin-right: 85px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -716,7 +430,7 @@ fieldset {
 @media screen and (max-width: 410px) {
     .user-modal {
         margin-right: 65px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -724,7 +438,7 @@ fieldset {
 @media screen and (max-width: 416px) {
     .user-modal {
         margin-right: 65px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -732,7 +446,7 @@ fieldset {
 @media screen and (max-width: 320px) {
     .user-modal {
         margin-right: 10px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -740,7 +454,7 @@ fieldset {
 @media screen and (max-width: 624px) {
     .user-modal {
         margin-right: 250px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -748,7 +462,7 @@ fieldset {
 @media screen and (max-width: 588px) {
     .user-modal {
         margin-right: 220px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -756,7 +470,7 @@ fieldset {
 @media screen and (max-width: 562px) {
     .user-modal {
         margin-right: 200px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -764,7 +478,7 @@ fieldset {
 @media screen and (max-width: 530px) {
     .user-modal {
         margin-right: 180px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -772,7 +486,7 @@ fieldset {
 @media screen and (max-width: 506px) {
     .user-modal {
         margin-right: 155px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -780,7 +494,7 @@ fieldset {
 @media screen and (max-width: 478px) {
     .user-modal {
         margin-right: 130px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -788,7 +502,7 @@ fieldset {
 @media screen and (max-width: 452px) {
     .user-modal {
         margin-right: 110px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -796,7 +510,7 @@ fieldset {
 @media screen and (max-width: 428px) {
     .user-modal {
         margin-right: 90px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -804,7 +518,7 @@ fieldset {
 @media screen and (max-width: 400px) {
     .user-modal {
         margin-right: 65px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
     }
 }
@@ -812,186 +526,8 @@ fieldset {
 @media screen and (max-width: 368px) {
     .user-modal {
         margin-right: 40px;
-        margin-top: 5rem; 
+        margin-top: 5rem;
         width: 240px;
-    }
-}
-
-
-
-
-/* css contato */
-
-#container_contact {
-    background-color: var(--color-white);
-}
-
-.col-md {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.text_title {
-    color: var(--color-deepNavyBlue);
-    font-weight: 400;
-    margin-left: 30px;
-    font-size: 4rem;
-    margin-top: 70px;
-}
-
-.pr_title {
-    color: var(--color-deepNavyBlue);
-    font-weight: 500;
-    margin-left: 30px;
-    margin-top: 70px;
-    font-size: 1.1rem;
-}
-
-.contact {
-    width: 100%;
-    max-width: 900px;
-    justify-content: flex-start;
-    margin-left: 30px;
-    padding: 20px;
-}
-
-.form-contact {
-    margin-bottom: 20px;
-}
-
-.inputs-contact {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.input-caixa-contact {
-    margin-bottom: 20px;
-}
-
-.input-caixa-contact label {
-    color: var(--color-deepNavyBlue);
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.input-caixa-contact input,
-.input-caixa-contact textarea,
-.input-caixa-contact select {
-    width: 65vw;
-    padding: 10px;
-    border: 1px solid var(--color-grey);
-    border-radius: 4px;
-    height: 40px;
-}
-
-.input-caixa-contact textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-.input-caixa-contact p {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-weight: 500;
-    color: var(--color-deepNavyBlue);
-}
-
-.enviar_contact {
-    padding: 0 0 50px;
-}
-
-.enviar_contact button {
-    padding: 10px 20px;
-    background-color: var(--color-deepNavyBlue);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.enviar_contact button:hover {
-    background-color: var(--color-deepNavyBlueCl);
-}
-
-@media screen and (max-width: 768px) {
-    .text_title {
-        font-size: 2rem;
-        margin-top: 40px;
-        margin-left: 5px;
-    }
-
-    .pr_title {
-        font-size: 1rem;
-        margin-top: 40px;
-        margin-left: 0;
-    }
-
-    .contact {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .input-caixa-contact input,
-    .input-caixa-contact textarea,
-    .input-caixa-contact select {
-        width: 100%;
-    }
-}
-
-@media screen and (width: 820px) and (height: 1180px) {
-    .pr_title {
-        font-size: 1rem;
-        margin-top: 40px;
-        margin-left: 5px;
-        margin-bottom: 15px;
-    }
-
-    .text_title {
-        margin-top: 40px;
-        margin-left: 0;
-    }
-
-    .contact {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-
-    .input-caixa-contact input,
-    .input-caixa-contact textarea,
-    .input-caixa-contact select {
-        width: 85%;
-    }
-}
-
-@media screen and (width: 912px) and (height: 1368px) {
-    .pr_title {
-        font-size: 1rem;
-        margin-top: 40px;
-        margin-left: 5px;
-        margin-bottom: 15px;
-    }
-
-    .text_title {
-        margin-top: 40px;
-        margin-left: 0;
-    }
-
-    .contact {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-
-    .input-caixa-contact input,
-    .input-caixa-contact textarea,
-    .input-caixa-contact select {
-        width: 85%;
     }
 }
 
@@ -1071,6 +607,36 @@ fieldset {
         left: 0;
         right: 0;
     }
+}
+
+/* css caixa de pesquisa de livro */
+
+/* Estilos para a caixa de pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.container_home .search-bar button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 /* <a href="https://br.freepik.com/vetores-gratis/ilustracao-de-poesia-de-design-plano-desenhado-a-mao_23832498.htm#query=livros&position=0&from_view=search&track=sph">Imagem de pikisuperstar</a> no Freepik */

@@ -69,7 +69,7 @@
             </div>
         </nav>
     </header>
-    <main tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+    <main tabindex="0" class="content container_home" onfocus="closeSidebar()" id="content">
         <div class="hero__home"></div>
         <!-- <div class="image_top">
             <h3 class="title__home">Explore e conecte-se: Compartilhe suas ideias no Fórum</h3>
@@ -81,6 +81,10 @@
         <p class="pr__home">Bem-vindo(a) ao nosso site! <br> Explore os livros e seus locais de venda, navegue pelo fórum, participe
             das discussões e faça parte dessa comunidade.<br> Juntos, podemos explorar e expandir nosso
             conhecimento, trocando experiências e promovendo um diálogo enriquecedor.</p>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Digite o nome do livro">
+            <button onclick="searchBooks()">Buscar</button>
+        </div>
         <div id="cards" class="cards"></div>
         <div id="modal"></div>
     </main>

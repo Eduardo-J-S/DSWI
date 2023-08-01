@@ -1,0 +1,333 @@
+.campo-vazio {
+    border: 1px solid var(--color-error);
+}
+
+#container-body-login {
+    height: 100vh;
+    width: 100%;
+}
+
+.container-login {
+    display: flex;
+}
+
+.container-login .img-login {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container-login .img-login img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container-login .img-login img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+.container-login .height_login {
+    height: 110vh;
+}
+
+.container-login .form-login {
+    flex: 1.2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: var(--color-white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.container-login .title__login {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--color-deepNavyBlue);
+    margin-bottom: 30px;
+}
+
+.container-login fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.container-login .social__media__login {
+    margin-bottom: 30px;
+}
+
+.container-login .list-social-media-login {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.container-login .list-social-media-login li {
+    margin-right: 10px;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.container-login .item-social-media-login a {
+    color: var(--color-darkGrey);
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.container-login .item-social-media-login a:hover {
+    background-color: var(--color-mossGreen);
+}
+
+.container-login .input-caixa-login {
+    list-style-type: none;
+    justify-content: center;
+}
+
+.container-login .inputs-login {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-login .input-caixa-login {
+    margin-bottom: 20px;
+}
+
+.container-login .input-caixa-login label {
+    display: block;
+    font-size: 14px;
+    color: var(--color-dark2);
+
+}
+
+.container-login .input-caixa-login input[type="email"],
+.container-login .input-caixa-login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-grey);
+    border-radius: 5px;
+    font-size: 14px;
+    color: var(--color-dark3);
+    margin-top: 8px;
+}
+
+.container-login .input-caixa-login input[type="email"]:focus,
+.container-login .input-caixa-login input[type="password"]:focus {
+    outline: none;
+    border-color: var(--color-dark2);
+}
+
+.container-login .registrar-login {
+    text-align: center;
+}
+
+.container-login .registrar-login button {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container-login .registrar-login button:hover {
+    background-color: var(--color-deepNavyBlue);
+}
+
+.container-login .register-button {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.container-login .register-button p {
+    margin-right: 10px;
+    color: var(--color-deepNavyBlue);
+}
+
+.container-login .register-button button a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-blue);
+}
+
+.container-login .register-button button {
+    border: none;
+    cursor: pointer;
+}
+
+.container-login .navegar-home-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.container-login .img_logo_register:hover {
+    transform: scale(1.1);
+
+}
+
+.container-login .img_logo_login {
+    height: 10vh;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 25px;
+}
+
+.container-login .img_logo_login:hover {
+    transform: scale(1.1);
+}
+
+
+.container-login .error-login .erroSenha-login {
+    color: var(--color-error);
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .container-login {
+        display: block;
+    }
+
+    .container-login .form-login {
+        height: 125vh;
+    }
+
+    .container-login .height_login {
+        height: 95vh;
+    }
+
+}
+
+@media screen and (width: 414px) and (height: 896px) {
+    .container-login .form-login {
+        height: 100vh;
+    }
+
+    .container-login .height_login {
+        height: 80vh;
+    }
+
+}
+
+@media screen and (width: 390px) and (height: 844px) {
+    .container-login .form-login {
+        height: 105vh;
+    }
+
+    .container-login .height_login {
+        height: 80vh;
+    }
+
+}
+
+@media screen and (width: 393px) and (height: 851px) {
+    .container-login .form-login {
+        height: 105vh;
+    }
+
+    .container-login .height_login {
+        height: 80vh;
+    }
+}
+
+@media screen and (width: 412px) and (height: 915px) {
+    .container-login .form-login {
+        height: 105vh;
+    }
+
+    .container-login .height_login {
+        height: 80vh;
+    }
+}
+
+@media screen and (width: 820px) and (height: 1180px) {
+    .container-login .form-login {
+        height: 80vh;
+    }
+
+    .container-login .height_login {
+        height: 80vh;
+    }
+}
+
+@media screen and (width: 768px) and (height: 1024px) {
+    .container-login .form-login {
+        height: 95vh;
+    }
+
+    .container-login.height_login {
+        height: 75vh;
+    }
+}
+
+@media screen and (width: 912px) and (height: 1368px) {
+    .container-login.form-login {
+        height: 80vh;
+    }
+
+    .container-login .height_login {
+        height: 83vh;
+    }
+}
+
+@media screen and (width: 280px) and (height: 653px) {
+    .container-login .form-login {
+        height: 135vh;
+    }
+
+    .container-login .erroSenha-login {
+        font-size: 13px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-login .height_login {
+        height: 95vh;
+    }
+}
+
+@media screen and (width: 412px) and (height: 914px) {
+    .container-login .form-login {
+        height: 100vh;
+    }
+
+    .container-login .height_login {
+        height: 80vh;
+    }
+}
+
+@media screen and (width: 1024px) and (height: 600px) {
+    .container-login .form-login {
+        height: 140vh;
+    }
+
+    .container-login .height_login {
+        height: 100vh;
+    }
+}
+
+.padding {
+    padding: 10px;
+}
