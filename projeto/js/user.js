@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let user = JSON.parse(localStorage.getItem('user'));
 
     if (window.location.pathname === '/pages/user.html') {
-        fetch('../api/db.json')
+        fetch('/api/db.json')
             .then(e => e.json())
             .then(e => {
                 const user = JSON.parse(localStorage.getItem('user'));
