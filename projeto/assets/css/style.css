@@ -68,7 +68,7 @@ body {
 }
 
 .content {
-    text-align: center;
+    /* text-align: center; */
     transition: 0.3s;
 }
 
@@ -145,9 +145,7 @@ body {
     }
 
 
-    .content {
-        margin-left: -2.5em;
-    }
+    
 
     .image_top {
         flex-direction: row;
@@ -202,7 +200,7 @@ body {
     width: 85%;
     margin-top: 20px;
     text-align: center;
-    margin-left: 3.5rem;
+    margin-left: 2rem;
     flex-wrap: wrap;
     margin-bottom: 10px;
     color: var(--color-black);
@@ -225,7 +223,7 @@ body {
     line-height: 1.5;
     /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); */
     /* background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)); */
-    margin-left: 3.5rem;
+    margin-left: 2rem;
 }
 
 .image_top h3 {
@@ -531,87 +529,10 @@ body {
     }
 }
 
-/* css sobre */
-
-/* #container_about {
-    background-color: var(--color-white);
-} */
-
-.container-fluid {
-    position: relative;
-    padding-top: 300px;
-    background-image: url(../img/sobreImage.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.hero__container {
-    position: absolute;
-    bottom: -50px;
-    height: 180px;
-    left: 40px;
-    right: 71%;
-    background-color: var(--color-deepNavyBlueCl);
-    padding: 30px;
-    box-sizing: border-box;
-}
-
-.hero__title {
-    color: var(--color-white);
-    font-weight: 400;
-    font-size: 5.5rem;
-    margin: 0;
-    margin-top: 10px;
-    margin-left: 25px;
-}
-
-.container__body {
-    padding: 50px 50px;
-    margin-top: 50px;
-    background-color: var(--color-darkGrey);
-}
-
-.container__body h2 {
-    color: var(--color-white);
-    font-weight: 400;
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.container__body p {
-    color: var(--color-white);
-    font-weight: 400;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    font-size: 18px;
-    text-align: justify;
-}
-
-@media screen and (max-width: 768px) {
-    .container__body {
-        padding: 50px 14px;
-    }
-
-    .hero__container {
-        right: 0;
-        left: 0;
-    }
-
-    .hero__title {
-        font-size: 4.5rem;
-    }
-}
-
-@media screen and (max-width: 1266px) {
-    .hero__container {
-        left: 0;
-        right: 0;
-    }
-}
-
 /* css caixa de pesquisa de livro */
 
 /* Estilos para a caixa de pesquisa */
+/* Estilo base */
 .search-bar {
     display: flex;
     align-items: center;
@@ -623,6 +544,7 @@ body {
 #searchInput {
     flex: 1;
     padding: 10px;
+    margin-left: 15px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
     font-size: 16px;
@@ -637,6 +559,21 @@ body {
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 16px;
+}
+
+/* Estilo responsivo */
+@media screen and (max-width: 768px) {
+    .search-bar {
+        max-width: 90vw; /* Ajusta a largura máxima para 90% da largura da tela */
+    }
+
+    #searchInput {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    .container_home .search-bar button {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
 }
 
 /* <a href="https://br.freepik.com/vetores-gratis/ilustracao-de-poesia-de-design-plano-desenhado-a-mao_23832498.htm#query=livros&position=0&from_view=search&track=sph">Imagem de pikisuperstar</a> no Freepik */

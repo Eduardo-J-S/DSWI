@@ -47,6 +47,7 @@
   
   .content__user .books-section {
     width: 70%;
+    text-align: center;
   }
 
   .content__user .books-section .section-heading {
