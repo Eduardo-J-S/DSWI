@@ -21,9 +21,20 @@ Ecercícios:
 
 # Projeto
 
+## Login de exemplo
+- Usuário:
+   - Email: joseph@gmail.com
+   - Senha: 123456
+  
 ## Descrição do Projeto
 
 O "DevBooks" é um projeto desenvolvido como parte da cadeira de Desenvolvimento Web 1 em um curso de graduação em Análise e Desenvolvimento de Sistemas. Trata-se de um site voltado para desenvolvedores, no qual os usuários podem pesquisar por livros relacionados à área de desenvolvimento e obter informações detalhadas, incluindo preço e locais de venda no Google. Além disso, o site oferece recursos adicionais para usuários autenticados, permitindo que criem e acessem suas contas personalizadas, tornando a experiência de pesquisa e interação mais personalizada e agradável.
+
+Uma característica marcante do projeto é a utilização do JSON Server, uma ferramenta que permite a criação de uma API REST simulada, o que proporciona a simulação de um ambiente de backend sem a necessidade de configurar um servidor real. Essa abordagem foi empregada em diversas funcionalidades-chave do site, incluindo:
+
+1. **Cadastro de Usuários:** Por meio do JSON Server, foi possível criar um sistema de cadastro de usuários.
+2. **Gerenciamento de Livros Favoritos:** Por meio do JSON Server, ao efetuar o login, os usuários autenticados podem adicionar livros à sua lista de favoritos.
+3. **Fórum de Perguntas e Respostas:** A funcionalidade do fórum foi implementada com o auxílio do JSON Server.
 
 ## Principais recursos:
 
@@ -33,8 +44,6 @@ O "DevBooks" é um projeto desenvolvido como parte da cadeira de Desenvolvimento
 4. **Lista de Livros Favoritos:** Usuários autenticados podem adicionar livros que despertam interesse à sua lista de favoritos para acessá-los facilmente posteriormente.
 
 O "DevBooks" proporciona uma experiência personalizada para desenvolvedores que buscam conhecimento e interação com outros membros da comunidade.
-
-## Instalação
 
 ## Recursos
 
