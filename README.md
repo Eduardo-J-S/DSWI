@@ -28,7 +28,7 @@ Ecercícios:
   
 ## Descrição do Projeto
 
-O "DevBooks" é um projeto desenvolvido como parte da cadeira de Desenvolvimento Web 1 em um curso de graduação em Análise e Desenvolvimento de Sistemas. Trata-se de um site voltado para desenvolvedores, no qual os usuários podem pesquisar por livros relacionados à área de desenvolvimento e obter informações detalhadas, incluindo preço e locais de venda no Google. Além disso, o site oferece recursos adicionais para usuários autenticados, permitindo que criem e acessem suas contas personalizadas, tornando a experiência de pesquisa e interação mais personalizada e agradável.
+O "DevBooks" é um projeto de FrontEnd desenvolvido como parte da cadeira de Desenvolvimento Web I no curso de graduação em Análise e Desenvolvimento de Sistemas. Trata-se de um site voltado para desenvolvedores, no qual os usuários podem pesquisar por livros relacionados à área de desenvolvimento e obter informações detalhadas, incluindo preço e locais de venda no Google. Além disso, o site oferece recursos adicionais para usuários autenticados, permitindo que criem e acessem suas contas personalizadas, tornando a experiência de pesquisa e interação mais personalizada e agradável.
 
 Uma característica marcante do projeto é a utilização do JSON Server, uma ferramenta que permite a criação de uma API REST simulada, o que proporciona a simulação de um ambiente de backend sem a necessidade de configurar um servidor real. Essa abordagem foi empregada em diversas funcionalidades-chave do site, incluindo:
 
